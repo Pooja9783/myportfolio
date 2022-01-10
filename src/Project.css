@@ -121,10 +121,10 @@ h2 {
 @media only screen and (max-width: 625px) {
   .one {
     margin: 2rem;
-    width: 420px;
+    width: 320px;
   }
   .one img {
-    width: 400px;
+    width: 304px;
     height: 300px;
   }
 }
