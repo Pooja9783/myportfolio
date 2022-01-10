@@ -141,3 +141,10 @@ a.bottom__to__top.active {
     width: 30px;
   }
 }
+
+@media only screen and (max-width: 225px) {
+  .two {
+    display: grid;
+    grid-template-columns: auto;
+  }
+}
