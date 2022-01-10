@@ -132,3 +132,12 @@ a.bottom__to__top.active {
     grid-template-columns: auto auto;
   }
 }
+@media only screen and (max-width: 325px) {
+  .icon-name {
+    margin: 0.5rem;
+    width: 120px;
+  }
+  .tech-stack .right img {
+    width: 30px;
+  }
+}

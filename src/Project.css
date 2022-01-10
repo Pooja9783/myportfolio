@@ -121,10 +121,10 @@ h2 {
 @media only screen and (max-width: 625px) {
   .one {
     margin: 2rem;
-    width: 320px;
+    width: 358px;
   }
   .one img {
-    width: 304px;
+    width: 340px;
     height: 300px;
   }
 }
@@ -135,11 +135,11 @@ h2 {
     grid-template-columns: auto;
   }
   .one {
-    margin: 2rem auto;
-    width: 320px;
+    margin: 2rem 0;
+    width: 300px;
   }
   .one img {
-    width: 300px;
+    width: 285px;
     height: 300px;
   }
   .one p {
