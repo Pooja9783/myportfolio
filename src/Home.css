@@ -154,6 +154,9 @@ li.sideNavbar {
     display: flex;
     justify-content: flex-end;
   }
+  .home {
+    width: 100%;
+  }
   .sideNavbar {
     display: flex;
   }
@@ -179,15 +182,27 @@ li.sideNavbar {
 @media only screen and (max-width: 625px) {
   .home__content {
     display: block;
-    width: 400px;
+    width: 100%;
   }
+
   h2.home__text.pz__10 {
     font-size: 25px;
   }
   h3.sweet.pz__10 {
     font-size: 30px;
   }
+  .logo i {
+    font-size: 40px;
+    color: #f9004d;
+  }
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 420px) {
+  .home__meta p {
+    color: white;
+    font-size: 0.8rem;
+  }
+  .home {
+    width: 100%;
+  }
 }
