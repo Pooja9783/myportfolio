@@ -16,10 +16,10 @@ export default function Projects() {
               <h2>Clone of HealthKart</h2>
               <p>
                 HealthKart is an online health and fitness store for men and
-                women, which offers fitness products, services and community to
-                help consumers achieve their fitness goals.
+                women, where we can order health and fitness-related products on
+                this website.
               </p>
-              <p>Teck-Stack: HTML | CSS | Javascript</p>
+              <p> Used tech-stack : HTML | CSS | Javascript</p>
 
               <a
                 href="https://heawealthy.netlify.app/ "
@@ -40,10 +40,11 @@ export default function Projects() {
               <img src={Img1} alt="project" />
               <h2>Clone of Gearbest</h2>
               <p>
-                Gearbest is an online platform for the best cell phones,
-                electronic gadgets, toys, sporting goods, and home products.
+                Gearbest is an online platform where we can order many items
+                such as electronic gadgets, toys, sporting goods, and home
+                products.
               </p>
-              <p>Teck-Stack: HTML | CSS | Javascript | Nodejs</p>
+              <p> Used tech-stack : HTML | CSS | Javascript | Nodejs</p>
               <a
                 href="https://elated-jennings-7a51a8.netlify.app/"
                 target="_blank"
@@ -63,12 +64,13 @@ export default function Projects() {
               <img src={Img} alt="project" />
               <h2>Clone of Pluralsight</h2>
               <p>
-                Pluralsight offers a variety of video training courses for
-                software developers, IT administrators, and creative
-                professionals through its website
+                Pluralsight is an online platform where users can get a variety
+                of video training courses for software developers, IT
+                administrators, and creative professionals.
               </p>
               <p>
-                Teck-Stack: HTML | CSS | Javascript | Nodejs | MongoDB | Express
+                Used tech-stack : HTML | CSS | Javascript | Nodejs | MongoDB |
+                Express
               </p>
 
               <a

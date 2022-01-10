@@ -1,5 +1,5 @@
 .about {
-  background: #22181b;
+  background: #2e2226;
 }
 
 h1.about__heading {
@@ -74,15 +74,21 @@ a.bottom__to__top.active {
   margin: 0rem 1.5rem;
 }
 .icon-name {
+  background-color: rgb(252, 239, 239);
   display: inline-block;
-  border: 1px solid #f9004d;
-  margin: 2rem;
+  border: 1px solid #1a1617;
+  margin: 0.5rem;
   border-radius: 5%;
   padding: 1.5rem;
   text-align: center;
 }
+.icon-name:hover {
+  background-color: #3d3338;
+  color: aliceblue;
+}
 .icon-name p {
-  color: white;
+  color: #f9004d;
+  font-size: 20px;
 }
 
 /* RESPONSIVE */
@@ -97,8 +103,13 @@ a.bottom__to__top.active {
   }
   .icon-name {
     margin: 0.5rem;
-    width: 130px;
-    text-align: center;
+    width: 170px;
+  }
+  .tech-stack .right img {
+    width: 70px;
+  }
+  .icon-name p {
+    font-size: 14px;
   }
 }
 @media only screen and (max-width: 425px) {
@@ -109,8 +120,12 @@ a.bottom__to__top.active {
     font-size: 13px;
     transition: 0.4s ease;
   }
+  .icon-name {
+    margin: 0.5rem;
+    width: 140px;
+  }
   .tech-stack .right img {
-    margin: 0rem 1.2rem;
+    width: 50px;
   }
   .two {
     display: grid;

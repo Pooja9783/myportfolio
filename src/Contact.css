@@ -8,11 +8,16 @@
   font-weight: 500;
   color: #f9004d;
 }
+.center-div {
+  height: 50px;
+  margin: auto;
+  text-align: center;
+}
 .contacts .phone {
   color: #e8ffff;
-  display: flex;
-  width: 190px;
-  margin: auto;
+  display: block;
+  text-align: center;
+  margin: 0.7rem;
 }
 .contacts .phone a {
   border-bottom: 1px solid #f9004d;
@@ -21,9 +26,10 @@
 .contacts .phone i {
   margin: 0.3rem 0.9rem;
 }
+
 .contacts a i {
   font-size: 2rem;
-  margin: 2rem 1rem;
+  margin: 3rem 1rem;
   color: #e8ffff;
 }
 

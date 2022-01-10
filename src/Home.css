@@ -94,6 +94,9 @@ li.sideNavbar {
 .home-center {
   text-align: center;
 }
+.nav__items:hover {
+  color: #f9004d;
+}
 /* RESPONSIVE */
 
 .toggle__menu {
