@@ -230,17 +230,24 @@ li.sideNavbar {
     display: inline-block;
     text-align: center;
   }
+  .home__meta{
+    text-align: center;
+  }
 }
 
 @media only screen and (max-width: 420px) {
-  .home__meta p {
-    color: white;
-    font-size: 0.8rem;
-  }
+  .home__content p {
+    font-size: 25px;
+    line-height: 30px;
+}
   .home {
     width: 100%;
   }
-  .home-content{
+  .home__content {
     display: inline-block;
+  }
+  .home__meta{
+    text-align: center;
+
   }
 }
