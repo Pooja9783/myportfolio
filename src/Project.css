@@ -1,5 +1,5 @@
 .projects {
-  background-color: #010101;
+  background-color: #02040e;;
   width: 100%;
 }
 .projects h1 {
@@ -18,9 +18,9 @@
   grid-template-columns: auto auto;
 }
 .one {
-  width: 600px;
+  width: 500px;
   border: 2px solid;
-  background-color: #191919;
+  background-color: rgba(52, 90, 161, 0.133);
   margin: 2rem auto;
   padding: 6px;
   border-top-left-radius: 2rem;
@@ -34,7 +34,7 @@ h2 {
 }
 .one img {
   margin: auto;
-  width: 584px;
+  width: 484px;
   height: 350px;
   border: 2px solid black;
   border-top-left-radius: 2rem;
@@ -68,12 +68,11 @@ h2 {
     grid-template-columns: auto auto;
   }
   .one {
-    width: 400px;
-
-    margin: 1rem;
+    width: 300px;
+    margin: 0rem;
   }
   .one img {
-    width: 377px;
+    width: 277px;
     height: 200px;
   }
 }
@@ -81,23 +80,28 @@ h2 {
   .center {
     width: 100%;
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: auto auto;
   }
   .one {
-    width: 500px;
+    width: 350px;
+    margin: .6rem;
   }
   .one img {
-    width: 483px;
+    width: 333px;
     height: 280px;
   }
   .one p {
-    font-size: 2rem;
+    font-size: 1rem;
   }
   .one h2 {
-    font-size: 3rem;
+    font-size: 1.5rem;
   }
 }
 @media only screen and (max-width: 768px) {
+  .project-section {
+    width: 70%;
+    margin: auto;
+  }
   .center {
     width: 100%;
     display: grid;
@@ -105,11 +109,11 @@ h2 {
   }
   .one {
     margin: 2rem;
-    width: 440px;
+    width: 480px;
   }
   .one img {
-    width: 420px;
-    height: 300px;
+    width: 460px;
+    height: 200px;
   }
   .one p {
     font-size: 1rem;
@@ -117,30 +121,47 @@ h2 {
   .one h2 {
     font-size: 2rem;
   }
+  .project-center .center{
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
 }
 @media only screen and (max-width: 625px) {
+  .project-section {
+    width: 100%;
+    /* margin: auto; */
+  }
+  .project-center .center{
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
   .one {
-    margin: 2rem 0;
     width: 358px;
   }
   .one img {
     width: 340px;
-    height: 300px;
+    height: 250px;
   }
 }
 @media only screen and (max-width: 425px) {
+  .project-section {
+    width: 70%;
+    margin: auto;
+  }
   .center {
     width: 100%;
     display: grid;
     grid-template-columns: auto;
   }
   .one {
-    margin: 2rem 0;
     width: 300px;
   }
   .one img {
     width: 285px;
-    height: 300px;
+    height: 200px;
   }
   .one p {
     font-size: 1rem;
@@ -152,7 +173,6 @@ h2 {
 
 @media only screen and (max-width: 325px) {
   .one {
-    margin: 2rem 0;
     width: 260px;
   }
   .one img {
@@ -163,7 +183,6 @@ h2 {
 
 @media only screen and (max-width: 225px) {
   .one {
-    margin: 2rem 0;
     width: 200px;
   }
   .one img {

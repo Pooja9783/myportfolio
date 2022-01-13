@@ -1,5 +1,5 @@
 .about {
-  background: #2e2226;
+  background: #02040e;;
 }
 
 h1.about__heading {
@@ -83,11 +83,11 @@ a.bottom__to__top.active {
   text-align: center;
 }
 .icon-name:hover {
-  background-color: #3d3338;
-  color: aliceblue;
+  background-color: #f52365;
+ 
 }
 .icon-name p {
-  color: #f9004d;
+color:#02040e;
   font-size: 20px;
 }
 

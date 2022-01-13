@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "./img/my.jpeg";
+
 
 import "./about.css";
 export default function About() {
@@ -9,9 +9,7 @@ export default function About() {
         <h1>About</h1>
 
         <div className="about-section">
-          <div className="profile-img">
-            <img src={Image} alt="img" />
-          </div>
+         
 
           <div className="para">
             <p>

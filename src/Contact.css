@@ -1,12 +1,12 @@
 .contacts {
-  background: #191919;
+  background: #f9004d;
   text-align: center;
 }
 .contacts h1 {
   text-align: center;
   font-size: 3rem;
   font-weight: 500;
-  color: #f9004d;
+    color:  #02040e;
 }
 .center-div {
   height: 50px;
@@ -20,7 +20,7 @@
   margin: 0.7rem;
 }
 .contacts .phone a {
-  border-bottom: 1px solid #f9004d;
+  border-bottom: 1px solid #02040e;;
   cursor: pointer;
 }
 .contacts .phone i {

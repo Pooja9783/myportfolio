@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Home.css";
+import Image from "./img/my.jpeg";
 
 function Home() {
   // fixed Header
@@ -82,12 +83,15 @@ function Home() {
         <div className="home-center" id="Home">
           <div className="container">
             <div className="home__content">
+            <div className="profile-img">
+            <img src={Image} alt="img" />
+          </div>
               <div className="home__meta">
-                <h2 className="home__text pz__10">Hi, </h2>
+                <h2 className="home__text pz__10">Hi there, </h2>
                 <h2 className="home__text pz__10">I’m Pooja Sankhala</h2>
                 <h3 className="home__text sweet pz__10">
-                  Full-stack Web Developer.
-                </h3>
+             Full-Stack Web Developer.
+                                </h3>
                 <p>
                   Keen to learn new things || Enthusiatic to solve problems.
                 </p>

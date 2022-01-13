@@ -10,14 +10,13 @@ export default function Projects() {
       <div className="projects">
         <h1>Projects</h1>
         <div className="project-section">
+        <div className="project-center">
           <div className="center">
             <div className="one">
               <img src={Image} alt="project" />
               <h2>Clone of HealthKart</h2>
               <p>
-                HealthKart is an online health and fitness store for men and
-                women, where we can order health and fitness-related products on
-                this website.
+            Built authentication and integrated  it with functionallity of Home Page And Signup & Signin pages.
               </p>
               <p> Used tech-stack : HTML | CSS | Javascript</p>
 
@@ -40,9 +39,8 @@ export default function Projects() {
               <img src={Img1} alt="project" />
               <h2>Clone of Gearbest</h2>
               <p>
-                Gearbest is an online platform where we can order many items
-                such as electronic gadgets, toys, sporting goods, and home
-                products.
+              
+              The Landing Page of Gearbest website displays various products and categories,  In headers displays search bar, login, and cart pages, created image carousal, and at the bottom section there is a footer.
               </p>
               <p> Used tech-stack : HTML | CSS | Javascript | Nodejs</p>
               <a
@@ -60,33 +58,7 @@ export default function Projects() {
                 <button>GitHub Link</button>
               </a>
             </div>
-            <div className="one">
-              <img src={Img} alt="project" />
-              <h2>Clone of Pluralsight</h2>
-              <p>
-                Pluralsight is an online platform where users can get a variety
-                of video training courses for software developers, IT
-                administrators, and creative professionals.
-              </p>
-              <p>
-                Used tech-stack : HTML | CSS | Javascript | Nodejs | MongoDB |
-                Express
-              </p>
-
-              <a
-                href="https://aadityaneve.github.io/Clone-Pluralsight/pages/index.html"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <button>Demo</button>
-              </a>
-              <a
-                href="https://github.com/aadityaneve/Clone-Pluralsight"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <button>GitHub Link</button>
-              </a>
+           
             </div>
           </div>
         </div>
