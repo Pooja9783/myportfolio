@@ -5,8 +5,8 @@
   background-size: cover;
 }
 li.nav__items {
-  font-size: 20px;
-  padding-bottom: 10px;
+  font-size: 24px;
+  padding-bottom: 5px;
   margin: 0px 2rem;
 }
 .home__content {
@@ -32,7 +32,7 @@ h3.home__text {
   z-index: 1000;
   width: 100%;
   padding: 0px 30px;
-  background-color: #020720
+  background-color: #02040e;
 }
 
 .toggle__menu {
@@ -65,10 +65,6 @@ ul.sidebar.d__flex {
   top: 0%;
   flex-direction: column;
 }
-
-
-
-
 li.sideNavbar {
   padding: 5px 30px;
   margin-top: 40px;
@@ -89,7 +85,7 @@ li.sideNavbar {
 }
 
 .ul-li .d__flex {
-  margin-left: 8rem;
+  margin-left: 28rem;
 }
 
 .home__meta p {
@@ -232,9 +228,6 @@ li.sideNavbar {
   }
   .home__content {
     display: inline-block;
-    text-align: center;
-  }
-  .home__meta{
     text-align: center;
   }
 }
