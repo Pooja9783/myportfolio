@@ -39,7 +39,7 @@ hr {
   position: fixed;
   z-index: 1000;
   width: 100%;
-  padding: 0px 30px;
+  padding: 0px 10px;
 }
 
 .toggle__menu {
@@ -141,6 +141,7 @@ li.sideNavbar {
   .profile-img {
     margin-top: 90px;
   }
+
   .profile-img img {
     width: 240px;
   }
@@ -307,12 +308,15 @@ li.sideNavbar {
     font-size: 25px;
     line-height: 30px;
   }
+  .home__bg {
+  }
   .home {
     width: 100%;
   }
   .home__content {
     display: inline-block;
   }
+
   .home__meta {
     text-align: center;
   }
