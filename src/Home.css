@@ -308,16 +308,19 @@ li.sideNavbar {
     font-size: 25px;
     line-height: 30px;
   }
-  .home__bg {
-  }
+
   .home {
     width: 100%;
   }
   .home__content {
     display: inline-block;
+    margin: 0px 0px;
   }
 
   .home__meta {
     text-align: center;
   }
+}
+
+@media only screen and (max-width: 395px) {
 }
