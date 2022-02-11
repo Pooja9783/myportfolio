@@ -1,5 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Great+Vibes&display=swap");
 .home__bg {
-  background-color: #02040e;
+  background-color: #1b1b1b;
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -8,6 +9,7 @@ li.nav__items {
   font-size: 24px;
   padding-bottom: 5px;
   margin: 0px 2rem;
+  color: #1b1b1b;
 }
 .home__content {
   padding: 10px 0px;
@@ -16,23 +18,28 @@ h2.home__text {
   font-size: 54px;
   line-height: 30px;
   font-weight: 800;
-
 }
 h3.home__text {
   font-size: 54px;
   line-height: 50px;
   font-weight: 800;
 }
+hr {
+  border: 1px solid #ffc506;
+  width: 100%;
+  height: 1px;
+}
 
 .header {
   transition: 0.4s all ease;
+  height: 70px;
+  background-color: #ffc506;
 }
 .header.active {
   position: fixed;
   z-index: 1000;
   width: 100%;
   padding: 0px 30px;
-  background-color: #02040e;
 }
 
 .toggle__menu {
@@ -42,24 +49,28 @@ h3.home__text {
   z-index: 1000;
   width: 100%;
 }
-.logo{
-  width: 50px;
-  height: 50px;
-  border: 2px solid #f9004d;
-  background-color: #f9004d;
-  border-radius: 50%;
-  margin: 1px 30px;
+.logo {
+  margin: 1px 60px;
+  text-align: center;
+  display: flex;
 }
-.logo i {
+.logo p {
+  color: #1b1b1b;
+  font-size: 28px;
+  font-family: "Great Vibes", cursive;
+  margin: 5px 10px;
+}
+.logo-name {
   font-size: 40px;
-  color: white;
+  font-weight: 200;
+  color: #1b1b1b;
 }
 ul.sidebar.d__flex {
   flex-wrap: wrap;
   height: 100%;
   position: fixed;
   right: 0%;
-  background: #010101;
+  background: #1b1b1b;
   justify-content: right;
   width: 300px;
   top: 0%;
@@ -67,11 +78,12 @@ ul.sidebar.d__flex {
 }
 li.sideNavbar {
   padding: 5px 30px;
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .home__content {
   display: inline-flex;
+  margin: auto 90px;
 }
 /* code start */
 
@@ -94,21 +106,21 @@ li.sideNavbar {
 }
 
 .home-content {
-    width: 100%;
+  width: 100%;
 }
-.home__meta{
+.home__meta {
   text-align: left;
 }
-.profile-img{
+.profile-img {
   margin-top: 90px;
 }
 .profile-img img {
   width: 350px;
-  border: 6px solid #f9004d;
-   border-radius: 50%; 
+  border: 6px solid #ffc506;
+  border-radius: 50%;
 }
 .nav__items:hover {
-  color: #f9004d;
+  color: white;
 }
 /* RESPONSIVE */
 
@@ -120,73 +132,116 @@ li.sideNavbar {
 }
 
 @media only screen and (max-width: 1268px) {
-
   .ul-li .d__flex {
     margin-left: 0;
   }
-  
-
 }
 
 @media only screen and (max-width: 1068px) {
-
   .profile-img {
-    margin-top: 90px
-}
-.profile-img img {
-  width: 240px;
-}
-  .home__content h2{
+    margin-top: 90px;
+  }
+  .profile-img img {
+    width: 240px;
+  }
+  .home__content h2 {
     font-size: 30px;
-    line-height: 5px;
+    line-height: 25px;
   }
-  .home__content h3{
+  .home__content h3 {
     font-size: 25px;
-    line-height: 5px;
+    line-height: 25px;
   }
-  .home__content p{
+  .home__content p {
     font-size: 20px;
-    line-height: 30px;
+    line-height: 25px;
   }
-  .home__meta{
+  .home__meta {
     text-align: left;
+  }
+  .home__content {
+    display: inline-flex;
+    margin: auto 10px;
+  }
+  .ul-li .d__flex {
+    margin-left: 0rem;
+  }
+  .logo {
+    width: 340px;
+  }
+  .logo p {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0px 5px;
+  }
+  .logo-name {
+    font-size: 20px;
+    margin: 0px;
   }
 }
 
 @media only screen and (max-width: 868px) {
-
-
   h2.home__text.pz__10 {
     font-size: 35px;
     margin: 0;
     padding: 0;
+  }
+  .logo {
+    width: 260px;
+    margin: 0px 0px;
+  }
+  .logo p {
+    font-size: 18px;
+    margin: 5px 2px;
+  }
+  .logo-name {
+    font-size: 30px;
+    margin: 0;
+  }
+  li.nav__items {
+    font-size: 18px;
+  }
+  .home__content {
+    display: inline-flex;
   }
   h3.sweet.pz__10 {
     font-size: 30px;
     margin: 0;
     padding: 0;
   }
-  .home__content h2{
+  .home__content h2 {
     font-size: 30px;
     line-height: 55px;
   }
-  .home__content h3{
+  .home__content h3 {
     font-size: 25px;
     line-height: 35px;
   }
-  .home__content p{
+  .home__content p {
     font-size: 20px;
-    line-height: 30px;
+    line-height: 40px;
   }
-
 }
 
 @media only screen and (max-width: 768px) {
   .header {
     justify-content: space-between;
   }
- 
- 
+  .home__content {
+    display: inline-flex;
+    margin: 0px 10px;
+  }
+  .logo {
+    margin: 0px 0px;
+  }
+  .logo p {
+    font-size: 20px;
+  }
+  .logo-name {
+    font-size: 25px;
+    margin: 0px 0px;
+  }
+
   .toggle__menu {
     display: flex;
     justify-content: flex-end;
@@ -213,6 +268,18 @@ li.sideNavbar {
   h3.sweet.pz__10 {
     font-size: 25px;
   }
+  .logo {
+    width: 240px;
+  }
+  .logo p {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0px 5px;
+  }
+  .logo-name {
+    font-size: 20px;
+    margin: 0px;
+  }
 }
 
 @media only screen and (max-width: 625px) {
@@ -224,13 +291,13 @@ li.sideNavbar {
   }
   .logo i {
     font-size: 40px;
-    color:white;
+    color: white;
   }
   .home__content {
     display: inline-block;
     text-align: center;
   }
-  .home__meta{
+  .home__meta {
     text-align: center;
   }
 }
@@ -239,15 +306,14 @@ li.sideNavbar {
   .home__content p {
     font-size: 25px;
     line-height: 30px;
-}
+  }
   .home {
     width: 100%;
   }
   .home__content {
     display: inline-block;
   }
-  .home__meta{
+  .home__meta {
     text-align: center;
-
   }
 }

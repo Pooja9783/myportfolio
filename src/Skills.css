@@ -1,5 +1,5 @@
 .about {
-  background: #02040e;;
+  background-color: #1b1b1b;
 }
 
 h1.about__heading {
@@ -25,7 +25,7 @@ a.bottom__to__top {
   position: fixed;
   bottom: 3%;
   right: 2%;
-  background-color: #f9004d;
+  background-color: #fac61c;
   border-radius: 50%;
   cursor: pointer;
   display: none;
@@ -43,7 +43,7 @@ a.bottom__to__top.active {
 }
 .tagline h1 {
   text-align: center;
-  color: #f9004d;
+  color: #ffc506;
   font-size: 3rem;
   font-weight: 500;
 }
@@ -83,11 +83,10 @@ a.bottom__to__top.active {
   text-align: center;
 }
 .icon-name:hover {
-  background-color: #f52365;
- 
+  background-color: #ffc506;
 }
 .icon-name p {
-color:#02040e;
+  color: #02040e;
   font-size: 20px;
 }
 

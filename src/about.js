@@ -1,5 +1,5 @@
 import React from "react";
-
+import AboutImage from "./img/about-me.png";
 
 import "./about.css";
 export default function About() {
@@ -9,8 +9,6 @@ export default function About() {
         <h1>About</h1>
 
         <div className="about-section">
-         
-
           <div className="para">
             <p>
               I always wanted to have a professional career but couldn't figure
@@ -27,6 +25,9 @@ export default function About() {
               kept pursuing it, and that's when I began my journey towards
               becoming a full-stack web.
             </p>
+          </div>
+          <div className="img">
+            <img src={AboutImage} alt="about-me" />
           </div>
         </div>
         <div className="clear"></div>

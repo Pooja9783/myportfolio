@@ -1,10 +1,10 @@
 .projects {
-  background-color: #02040e;;
+  background-color: #2e2c2cb4;
   width: 100%;
 }
 .projects h1 {
   text-align: center;
-  color: #f9004d;
+  color: #ffc506;
   font-size: 3rem;
   font-weight: 500;
 }
@@ -20,7 +20,7 @@
 .one {
   width: 500px;
   border: 2px solid;
-  background-color: rgba(52, 90, 161, 0.133);
+  background-color: #1b1b1b;
   margin: 2rem auto;
   padding: 6px;
   border-top-left-radius: 2rem;
@@ -45,7 +45,7 @@ h2 {
   height: 40px;
   margin: 1rem;
 
-  background-color: #f9004d;
+  background-color: #ffc506;
   border: 1px solid #072227;
   border-radius: 7px;
   color: #072227;
@@ -84,7 +84,7 @@ h2 {
   }
   .one {
     width: 350px;
-    margin: .6rem;
+    margin: 0.6rem;
   }
   .one img {
     width: 333px;
@@ -121,7 +121,7 @@ h2 {
   .one h2 {
     font-size: 2rem;
   }
-  .project-center .center{
+  .project-center .center {
     width: 100%;
     text-align: center;
     justify-content: center;
@@ -132,7 +132,7 @@ h2 {
     width: 100%;
     /* margin: auto; */
   }
-  .project-center .center{
+  .project-center .center {
     width: 100%;
     text-align: center;
     justify-content: center;

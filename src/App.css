@@ -4,14 +4,13 @@
   margin: 0;
   box-sizing: border-box;
   outline: none;
-  font-family: Arial, Helvetica, sans-serif
-
+  font-family: Arial, Helvetica, sans-serif;
 }
 body {
   width: 100%;
   height: 100%;
-  background-color: #02040e;
-  font-family: Arial, Helvetica, sans-serif
+  background-color: #1b1b1b;
+  font-family: Arial, Helvetica, sans-serif;
 }
 a {
   text-decoration: none;
@@ -28,7 +27,6 @@ span {
   font-size: 18px;
   color: #fff;
   font-family: Arial, Helvetica, sans-serif;
-  
 }
 li {
   overflow: hidden;
@@ -75,7 +73,7 @@ p {
   padding: 10px 0px;
 }
 .sweet {
-  color: #f9004d;
+  color: #ffc506;
 }
 .row {
   display: flex;
@@ -116,7 +114,7 @@ svg {
   position: absolute;
 }
 strong {
-  color: #f9004d;
+  color: #ffc506;
   font-weight: 600;
 }
 input {
@@ -126,9 +124,9 @@ button.btn {
   font-size: 18px;
   font-weight: 500;
   border-radius: 5px;
-  border: 2px solid #f9004d;
-  background-color: #f9004d;
-  color: #fff !important;
+  border: 2px solid #ffc506;
+  background-color: #ffc506;
+  color: rgb(39, 39, 39) !important;
   text-transform: uppercase;
   letter-spacing: 2px;
   transition: 0.4s all ease;
