@@ -6,7 +6,7 @@ export default function About() {
   return (
     <div>
       <div className="about-bg" id="about">
-        <h1>About</h1>
+        <h1>About Me</h1>
 
         <div className="about-section">
           <div className="para">

@@ -7,7 +7,8 @@
   color: #ffc506;
   font-size: 3rem;
   font-weight: 500;
-  margin-bottom: 3rem;
+  align-items: center;
+  padding-top: 1.3rem;
 }
 .about-section {
   margin: 0rem 1rem;
@@ -19,7 +20,7 @@
   margin-top: 70px;
 }
 .img img {
-  width: 600px;
+  width: 700px;
 }
 
 .about-section .para p {
@@ -48,7 +49,7 @@
     display: inline-block;
   }
   .img img {
-    width: 250px;
+    display: none;
   }
   .about-section .para p {
     color: white;
