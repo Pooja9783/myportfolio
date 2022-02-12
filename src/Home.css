@@ -56,7 +56,8 @@ hr {
 }
 .logo p {
   color: #1b1b1b;
-  font-size: 28px;
+  font-size: 32px;
+  /* font-weight: bold; */
   font-family: "Great Vibes", cursive;
   margin: 5px 10px;
 }
