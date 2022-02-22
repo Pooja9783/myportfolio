@@ -11,11 +11,6 @@ export default function About() {
         <div className="about-section">
           <div className="para">
             <p>
-              I always wanted to have a professional career but couldn't figure
-              out my way to a job. So, after completing my Post Graduation, I
-              started exploring my career options.
-              <br />
-              <br />
               Having completed my Graduation in Arts, I never thought that I
               would be interested in becoming anything close to a full-stack web
               developer. When I was searching for a job as a data entry operator
@@ -24,6 +19,10 @@ export default function About() {
               HTML, CSS & Javascript. Programming attracted me further, and I
               kept pursuing it, and that's when I began my journey towards
               becoming a full-stack web.
+              <br />
+              <br />I always wanted to have a professional career but couldn't
+              figure out my way to a job. So, after completing my Post
+              Graduation, I started exploring my career options.
             </p>
           </div>
           <div className="img">

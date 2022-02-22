@@ -17,10 +17,11 @@
 }
 .img {
   align-items: center;
-  margin-top: 70px;
+  /* margin-top: 70px; */
+  margin: auto;
 }
 .img img {
-  width: 700px;
+  width: 550px;
 }
 
 .about-section .para p {
