@@ -56,13 +56,13 @@ hr {
 }
 .logo p {
   color: #1b1b1b;
-  font-size: 32px;
-  /* font-weight: bold; */
+  font-size: 27px;
+  font-weight: bold;
   font-family: "Great Vibes", cursive;
-  margin: 5px 10px;
+  margin: auto 10px;
 }
 .logo-name {
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 200;
   color: #1b1b1b;
 }
