@@ -16,12 +16,12 @@ li.nav__items {
 }
 h2.home__text {
   font-size: 54px;
-  line-height: 30px;
+  line-height: 50px;
   font-weight: 800;
 }
 h3.home__text {
   font-size: 54px;
-  line-height: 50px;
+  line-height: 55px;
   font-weight: 800;
 }
 hr {
@@ -56,10 +56,10 @@ hr {
 }
 .logo p {
   color: #1b1b1b;
-  font-size: 27px;
+  font-size: 30px;
   font-weight: bold;
   font-family: "Great Vibes", cursive;
-  margin: auto 10px;
+  margin: auto 5px;
 }
 .logo-name {
   font-size: 30px;
