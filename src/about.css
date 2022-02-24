@@ -43,6 +43,12 @@
     margin: 0;
     padding: 2rem;
   }
+  .about-section .para p {
+    width: auto;
+  }
+  .img img {
+    /* width: 450px; */
+  }
 }
 @media only screen and (max-width: 768px) {
   .about-section {

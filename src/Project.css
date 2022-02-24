@@ -32,6 +32,12 @@ h2 {
   margin: 1rem;
   font-weight: 100;
 }
+h2 {
+  font-size: 22px;
+}
+p {
+  font-size: 18px;
+}
 .one img {
   margin: auto;
   width: 484px;
@@ -44,7 +50,6 @@ h2 {
   margin: 1rem 0.2rem;
   height: 40px;
   margin: 1rem;
-
   background-color: #ffc506;
   border: 1px solid #072227;
   border-radius: 7px;
@@ -68,11 +73,11 @@ h2 {
     grid-template-columns: auto auto;
   }
   .one {
-    width: 300px;
-    margin: 0rem;
+    width: 400px;
+    margin: auto 1rem;
   }
   .one img {
-    width: 277px;
+    width: 385px;
     height: 200px;
   }
 }

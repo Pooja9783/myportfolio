@@ -70,7 +70,7 @@ p {
   margin: 0px auto;
 }
 .pz__10 {
-  padding: 10px 0px;
+  /* padding: 10px 0px; */
 }
 .sweet {
   color: #ffc506;
@@ -86,7 +86,7 @@ p {
 .col__2 {
   max-width: 50%;
   display: flex;
-  padding: 20px;
+  /* padding: 20px; */
   justify-content: center;
   flex-direction: column;
 }
