@@ -47,7 +47,7 @@ export default function Projects() {
                 </p>
                 <p> Used tech-stack : HTML | CSS | Javascript | Nodejs</p>
                 <a
-                  href="https://elated-jennings-7a51a8.netlify.app/"
+                  href="https://gearbest-clone.netlify.app/index.html"
                   target="_blank"
                   rel="noreferrer"
                 >
