@@ -22,14 +22,14 @@ export default function Projects() {
                 <p> Used tech-stack : HTML | CSS | Javascript</p>
 
                 <a
-                  href="https://heawealthy.netlify.app/ "
+                  href="https://healthkart.hramdas.in/ "
                   target="_blank"
                   rel="noreferrer"
                 >
                   <button>Demo</button>
                 </a>
                 <a
-                  href="https://github.com/bhargavkatira/construct-week1"
+                  href="https://github.com/hramdas/HealthKart"
                   target="_blank"
                   rel="noreferrer"
                 >
