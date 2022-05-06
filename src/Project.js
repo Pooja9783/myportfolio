@@ -1,8 +1,10 @@
 import React from "react";
 import "./Project.css";
 import Image from "./img/project-1.png";
+
 import Img1 from "./img/project-3.png";
 import Img2 from "./img/project-4.png";
+import Img3 from "./img/project-2.png";
 
 export default function Projects() {
   return (
@@ -12,6 +14,35 @@ export default function Projects() {
         <div className="project-section">
           <div className="project-center">
             <div className="center">
+              <div className="one">
+                <img src={Img3} alt="project" />
+                <h2>Clone of Swiggy</h2>
+                <p>
+                  I have made clone of Swiggy where users can order food. I
+                  implemented search functionalities, user authentication,
+                  filter, and sorting.
+                </p>
+                <p>
+                  {" "}
+                  Used tech-stack : HTML | CSS | Javascript | Nodejs | ReactJs |
+                  Redux
+                </p>
+                <a
+                  href="swiggy-website-clone.netlify.app/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <button>Demo</button>
+                </a>
+                <a
+                  href="https://github.com/Pooja9783/swiggy-clone"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <button>GitHub Link</button>
+                </a>
+              </div>
+
               <div className="one">
                 <img src={Image} alt="project" />
                 <h2>Clone of HealthKart</h2>
