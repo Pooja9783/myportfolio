@@ -33,7 +33,7 @@ const responsive = {
   },
 };
 
-const Projects = (props) => {
+const Projects = () => {
   return (
     <div style={{ background: "#000000" }} id="projects">
       <Box
@@ -65,7 +65,7 @@ const Projects = (props) => {
             <Grid item md={6} mx={1} my={5}>
               <div>
                 <Paper>
-                  <Card sx={{ maxWidth: 345, height: "460px" }}>
+                  <Card sx={{ maxWidth: 445, height: "460px" }}>
                     <CardMedia
                       sx={{ height: 190 }}
                       image={projectOneImg}

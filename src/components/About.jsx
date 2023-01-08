@@ -1,5 +1,5 @@
 import React from "react";
-import myImage from "../img/my.jpg";
+import myImage from "../img/my.png";
 
 import { Box, Typography, Grid } from "@mui/material";
 const About = () => {
@@ -34,12 +34,12 @@ const About = () => {
           <Grid item xs={12} md={4} m={2} sx={{ margin: { md: "auto" } }}>
             <img
               src={myImage}
-              style={{ width: "300px", height: "500px" }}
+              style={{ width: "300px", height: "300px" }}
               alt={"Pooja"}
             />{" "}
           </Grid>
           <Grid item xs={12} md={7} m={2}>
-            <Typography variant="h5">
+            <Typography variant="h5" color="#FFFFFF">
               Having completed my Graduation in Arts, I never thought that I
               would be interested in becoming anything close to a full-stack web
               developer. When I was searching for a job as a data entry operator

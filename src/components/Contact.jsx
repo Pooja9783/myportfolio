@@ -59,7 +59,7 @@ const Contact = () => {
             />
             <a
               href="mailto: poojasankhala97@gmail.com"
-              sx={{ TextDecoration: "none" }}
+              style={{ textDecoration: "none" }}
             >
               <Typography
                 sx={{ fontSize: "20px", margin: "0px 5px", color: "#FFFFFF" }}
