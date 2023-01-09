@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { ThemeContext } from "../App";
 import PropTypes from "prop-types";
 import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
+import { Box, Grid } from "@mui/material";
 import CssBaseline from "@mui/material/CssBaseline";
 import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
@@ -40,13 +40,21 @@ function DrawerAppBar(props) {
       </Typography>
       <Divider />
       <List>
-        {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item} />
-            </ListItemButton>
-          </ListItem>
-        ))}
+        <Link href="#home" underline="none" m={2}>
+          <Typography id="heading">{"Home"}</Typography>
+        </Link>
+        <Link href="#about" underline="none" m={2}>
+          <Typography id="heading">{"About"}</Typography>
+        </Link>
+        <Link href="#skills" underline="none" m={2}>
+          <Typography id="heading">{"Skills"}</Typography>
+        </Link>
+        <Link href="#projects" underline="none" m={2}>
+          <Typography id="heading">{"Projects"}</Typography>
+        </Link>
+        <Link href="#contact" underline="none" m={2}>
+          <Typography id="heading">{"Contact"}</Typography>
+        </Link>
       </List>
     </Box>
   );
@@ -63,15 +71,31 @@ function DrawerAppBar(props) {
         id="appBar"
       >
         <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" } }}
-          >
-            <MenuIcon />
-          </IconButton>
+          <Box sx={{ flexGrow: 1 }}>
+            <Grid container spacing={2}>
+              <Grid item xs={6} md={8}>
+                <IconButton
+                  color="inherit"
+                  aria-label="open drawer"
+                  edge="start"
+                  onClick={handleDrawerToggle}
+                  sx={{ mr: 2, display: { sm: "none" } }}
+                >
+                  <MenuIcon />
+                </IconButton>{" "}
+              </Grid>
+              <Grid item xs={6} md={4}>
+                <Box
+                  style={{ float: "right" }}
+                  mr={10}
+                  mt={1}
+                  sx={{ mr: 2, display: { sm: "none" } }}
+                >
+                  <Switch onChange={toggleTheme} color="default" />
+                </Box>{" "}
+              </Grid>
+            </Grid>
+          </Box>
           <Typography
             variant="h6"
             component="div"

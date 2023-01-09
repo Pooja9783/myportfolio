@@ -31,10 +31,18 @@ const About = () => {
         </Typography>
 
         <Grid container spacing={2} mt={10}>
-          <Grid item xs={12} md={4} m={2} sx={{ margin: { md: "auto" } }}>
+          <Grid item xs={12} md={4} m={2} mt={5}>
             <img
               src={myImage}
-              style={{ width: "300px", height: "300px" }}
+              style={{
+                width: "300px",
+                height: "300px",
+                border: "2px solid #2C3333",
+                borderRadius: "50%",
+                display: "block",
+                marginLeft: "auto",
+                marginRight: "auto",
+              }}
               alt={"Pooja"}
             />{" "}
           </Grid>
@@ -48,6 +56,7 @@ const About = () => {
               HTML, CSS & Javascript. Programming attracted me further, and I
               kept pursuing it, and that's when I began my journey towards
               becoming a full-stack web.
+              <br />
               <br />I always wanted to have a professional career but couldn't
               figure out my way to a job. So, after completing my Post
               Graduation, I started exploring my career options.
