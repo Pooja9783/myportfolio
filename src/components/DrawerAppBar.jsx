@@ -1,4 +1,6 @@
 import * as React from "react";
+import { useContext } from "react";
+import { ThemeContext } from "../App";
 import PropTypes from "prop-types";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -20,14 +22,13 @@ const drawerWidth = 240;
 const navItems = ["Home", "About", "Skills", "Projects", "Contact"];
 
 function DrawerAppBar(props) {
+  const { toggleTheme } = useContext(ThemeContext);
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
-
-  const label = { inputProps: { "aria-label": "Switch demo" } };
 
   const drawer = (
     <Box
@@ -56,7 +57,11 @@ function DrawerAppBar(props) {
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar component="nav" sx={{ background: "#000000", height: "70px" }}>
+      <AppBar
+        component="nav"
+        sx={{ background: "#000000", height: "70px" }}
+        id="appBar"
+      >
         <Toolbar>
           <IconButton
             color="inherit"
@@ -71,37 +76,28 @@ function DrawerAppBar(props) {
             variant="h6"
             component="div"
             sx={{ ml: 10, flexGrow: 1, display: { xs: "none", sm: "block" } }}
+            id="logo"
           >
             Pooja Sankhala
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "flex" } }}>
-            <Link href="#home" underline="none" m={2} sx={{ color: "white" }}>
-              {"Home"}
+            <Link href="#home" underline="none" m={2}>
+              <Typography id="heading">{"Home"}</Typography>
             </Link>
-            <Link href="#about" underline="none" m={2} sx={{ color: "white" }}>
-              {"About"}
+            <Link href="#about" underline="none" m={2}>
+              <Typography id="heading">{"About"}</Typography>
             </Link>
-            <Link href="#skills" underline="none" m={2} sx={{ color: "white" }}>
-              {"Skills"}
+            <Link href="#skills" underline="none" m={2}>
+              <Typography id="heading">{"Skills"}</Typography>
             </Link>
-            <Link
-              href="#projects"
-              underline="none"
-              m={2}
-              sx={{ color: "white" }}
-            >
-              {"Projects"}
+            <Link href="#projects" underline="none" m={2}>
+              <Typography id="heading">{"Projects"}</Typography>
             </Link>
-            <Link
-              href="#contact"
-              underline="none"
-              m={2}
-              sx={{ color: "white" }}
-            >
-              {"Contact"}
+            <Link href="#contact" underline="none" m={2}>
+              <Typography id="heading">{"Contact"}</Typography>
             </Link>
             <Box mr={10} mt={1}>
-              <Switch {...label} />
+              <Switch onChange={toggleTheme} color="default" />
             </Box>
           </Box>
         </Toolbar>

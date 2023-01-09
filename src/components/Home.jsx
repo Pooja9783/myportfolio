@@ -5,7 +5,7 @@ const Home = () => {
     <div>
       <Box component="main" id="home">
         <Toolbar />
-        <Box sx={{ background: "#000000", color: "#9318EE" }} mt={0.8}>
+        <Box mt={0.8}>
           <Box>
             <Grid
               item
@@ -23,17 +23,17 @@ const Home = () => {
                   paddingTop: "40px",
                 }}
               >
-                <Typography variant="h4" sx={{ color: "#FFFFFF" }} p={1}>
+                <Typography variant="h4" id="heading" p={1}>
                   Hi there, I'm
-                  <Typography variant="span" sx={{ color: "#9318EE" }}>
+                  <Typography variant="span" id="headingName">
                     {" "}
                     Pooja Sankhala
                   </Typography>
                 </Typography>
-                <Typography variant="h5" sx={{ color: "#FFFFFF" }} p={1}>
+                <Typography variant="h5" id="heading" p={1}>
                   Full-Stack Web Developer.
                 </Typography>
-                <Typography variant="h6" p={1}>
+                <Typography variant="h6" p={1} id="heading">
                   Keen to learn new things || Enthusiatic to solve problems.
                 </Typography>
               </Box>
@@ -41,11 +41,12 @@ const Home = () => {
                 <Button
                   variant="contained"
                   sx={{
-                    bgcolor: "#9318EE",
+                    bgcolor: "#2C3333",
                     "&:hover": {
-                      backgroundColor: "#9318EE",
+                      backgroundColor: "#E7F6F2",
+                      color: "#2C3333",
                     },
-                    color: "#FFFFFF",
+                    color: "#E7F6F2",
                   }}
                 >
                   Get Resume

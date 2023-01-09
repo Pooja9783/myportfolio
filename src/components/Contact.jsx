@@ -8,11 +8,10 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 const Contact = () => {
   return (
-    <div style={{ background: "#000000" }} id="contact">
+    <div id="contact">
       <Box
         sx={{
           flexGrow: 1,
-          background: "#000000",
           color: "#9318EE",
           width: { md: "950px", sm: "auto" },
           margin: "auto",
@@ -21,11 +20,11 @@ const Contact = () => {
       >
         <Typography
           variant="h4"
+          id="heading"
           sx={{
-            color: "#FFFFFF",
             textAlign: "center",
-            borderBottom: "4px solid #9318EE",
-            borderLeft: "4px solid #9318EE",
+            borderBottom: "4px solid #2C3333",
+            borderLeft: "4px solid #2C3333",
             width: "190px",
             margin: "auto",
           }}
@@ -41,35 +40,67 @@ const Contact = () => {
             justifyContent: "center",
           }}
         >
-          <Box sx={{ display: "flex" }} py={1}>
+          <Box
+            sx={{
+              display: "flex",
+              width: "300px",
+              textAlign: "center",
+              justifyContent: "center",
+            }}
+            py={1}
+          >
             <SmartphoneIcon
-              sx={{ fontSize: "40px", margin: "0px 5px", color: "#FFFFFF" }}
+              id="heading"
+              sx={{ fontSize: "30px", margin: "0px 5px" }}
             />
             <a tel="+91 9783224446" target="_blank" rel="noreferrer">
               <Typography
-                sx={{ fontSize: "20px", margin: "0px 5px", color: "#FFFFFF" }}
+                id="heading"
+                sx={{ fontSize: "20px", margin: "0px 5px" }}
               >
                 +91 9783224446
               </Typography>
             </a>
           </Box>
-          <Box sx={{ display: "flex" }} py={1}>
+          <Box
+            sx={{
+              display: "flex",
+              width: "300px",
+              textAlign: "center",
+              justifyContent: "center",
+            }}
+            py={1}
+          >
             <MailOutlineIcon
-              sx={{ fontSize: "40px", margin: "0px 5px", color: "#FFFFFF" }}
+              id="heading"
+              sx={{ fontSize: "30px", margin: "2px 5px" }}
             />
             <a
               href="mailto: poojasankhala97@gmail.com"
               style={{ textDecoration: "none" }}
             >
               <Typography
-                sx={{ fontSize: "20px", margin: "0px 5px", color: "#FFFFFF" }}
+                id="heading"
+                sx={{
+                  fontSize: "20px",
+                  margin: "0px 5px",
+                  borderBottom: "1px solid #A5C9CA",
+                }}
               >
                 {" "}
                 poojasankhala97@gmail.com
               </Typography>
             </a>
           </Box>
-          <Box sx={{ display: "flex" }} py={1}>
+          <Box
+            sx={{
+              display: "flex",
+              width: "300px",
+              textAlign: "center",
+              justifyContent: "center",
+            }}
+            py={1}
+          >
             <Box>
               <a
                 href="https://github.com/Pooja9783"
@@ -77,7 +108,8 @@ const Contact = () => {
                 rel="noreferrer"
               >
                 <GitHubIcon
-                  sx={{ fontSize: "40px", margin: "2px 5px", color: "#FFFFFF" }}
+                  id="heading"
+                  sx={{ fontSize: "30px", margin: "2px 5px" }}
                 />
               </a>
             </Box>
@@ -85,32 +117,39 @@ const Contact = () => {
               href="https://www.linkedin.com/in/pooja-sankhala"
               target="_blank"
               rel="noreferrer"
+              id="heading"
             >
               <LinkedInIcon
-                sx={{ fontSize: "40px", margin: "2px 5px", color: "#FFFFFF" }}
+                id="heading"
+                sx={{ fontSize: "30px", margin: "2px 5px" }}
               />
             </a>
             <a
               href="https://twitter.com/poojasankhala9"
               target="_blank"
               rel="noreferrer"
+              id="heading"
             >
               <TwitterIcon
-                sx={{ fontSize: "40px", margin: "2px 5px", color: "#FFFFFF" }}
+                id="heading"
+                sx={{ fontSize: "30px", margin: "2px 5px", color: "#FFFFFF" }}
               />
             </a>
             <a
               href="https://www.instagram.com/poojasankhala_97/"
               target="_blank"
               rel="noreferrer"
+              id="heading"
             >
               <InstagramIcon
-                sx={{ fontSize: "40px", margin: "2px 5px", color: "#FFFFFF" }}
+                id="heading"
+                sx={{ fontSize: "30px", margin: "2px 5px", color: "#FFFFFF" }}
               />
             </a>
           </Box>
         </Box>
       </Box>
+      <hr />
     </div>
   );
 };

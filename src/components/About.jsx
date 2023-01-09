@@ -4,11 +4,11 @@ import myImage from "../img/my.png";
 import { Box, Typography, Grid } from "@mui/material";
 const About = () => {
   return (
-    <div style={{ background: "#000000" }} id="about">
+    <div id="about">
       <Box
         sx={{
           flexGrow: 1,
-          background: "#000000",
+
           color: "#9318EE",
           width: { md: "950px", sm: "auto" },
           margin: "auto",
@@ -17,11 +17,11 @@ const About = () => {
       >
         <Typography
           variant="h4"
+          id="heading"
           sx={{
-            color: "#FFFFFF",
             textAlign: "center",
-            borderBottom: "4px solid #9318EE",
-            borderLeft: "4px solid #9318EE",
+            borderBottom: "4px solid #2C3333",
+            borderLeft: "4px solid #2C3333",
             width: "160px",
             margin: "auto",
           }}
@@ -39,7 +39,7 @@ const About = () => {
             />{" "}
           </Grid>
           <Grid item xs={12} md={7} m={2}>
-            <Typography variant="h5" color="#FFFFFF">
+            <Typography variant="h5" id="heading">
               Having completed my Graduation in Arts, I never thought that I
               would be interested in becoming anything close to a full-stack web
               developer. When I was searching for a job as a data entry operator

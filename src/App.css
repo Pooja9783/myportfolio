@@ -1,4 +1,47 @@
-body{
-    background-color: #000000;
-    
+#dark {
+  background: #395b64;
 }
+#light {
+  background: #e7f6f2;
+}
+
+#dark body {
+  background: #395b64;
+}
+#light body {
+  background: #e7f6f2;
+}
+
+/* appbar */
+#dark #appBar {
+  background: #395b64;
+  color: #e7f6f2;
+}
+#light #appBar {
+  background: #e7f6f2;
+  color: #395b64;
+}
+#dark #heading {
+  color: #e7f6f2;
+}
+#light #heading {
+  color: #395b64;
+}
+#dark #headingName {
+  color: #6abebe;
+}
+#light #headingName {
+  color: #003232;
+}
+
+
+/* skills */
+#dark #skills {
+  background: #395b64;
+  color: #e7f6f2;
+}
+#light #skills {
+  background: #e7f6f2;
+  color: #395b64;
+}
+/* projects */

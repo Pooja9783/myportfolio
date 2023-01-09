@@ -13,11 +13,10 @@ const Skills = () => {
     color: theme.palette.text.secondary,
   }));
   return (
-    <div style={{ background: "#000000" }} id="skills">
+    <div id="skills">
       <Box
         sx={{
           flexGrow: 1,
-          background: "#000000",
           color: "#9318EE",
           width: { md: "950px", sm: "auto" },
           margin: "auto",
@@ -26,12 +25,12 @@ const Skills = () => {
       >
         <Typography
           variant="h4"
+          id="heading"
           sx={{
-            color: "#FFFFFF",
             textAlign: "center",
-            borderBottom: "4px solid #9318EE",
-            borderLeft: "4px solid #9318EE",
-            width: "100px",
+            borderBottom: "4px solid #2C3333",
+            borderLeft: "4px solid #2C3333",
+            width: "110px",
             margin: "auto",
           }}
         >
@@ -40,7 +39,7 @@ const Skills = () => {
         </Typography>
         <Box mt={10} p={2}>
           <Grid container spacing={2}>
-            <Grid item xs={6} md={2}>
+            <Grid item xs={6} md={2} id="skills">
               <Item>
                 <Box
                   sx={{
@@ -57,7 +56,7 @@ const Skills = () => {
                 </Box>
               </Item>
             </Grid>
-            <Grid item xs={6} md={2}>
+            <Grid item xs={6} md={2} id="skills">
               <Item>
                 <Box
                   sx={{
@@ -74,7 +73,7 @@ const Skills = () => {
                 </Box>
               </Item>
             </Grid>
-            <Grid item xs={6} md={2}>
+            <Grid item xs={6} md={2} id="skills">
               <Item>
                 <Box
                   sx={{
@@ -91,7 +90,7 @@ const Skills = () => {
                 </Box>
               </Item>
             </Grid>
-            <Grid item xs={6} md={2}>
+            <Grid item xs={6} md={2} id="skills">
               <Item>
                 <Box
                   sx={{
@@ -109,7 +108,7 @@ const Skills = () => {
               </Item>
             </Grid>
 
-            <Grid item xs={6} md={2}>
+            <Grid item xs={6} md={2} id="skills">
               <Item>
                 <Box
                   sx={{
@@ -127,7 +126,7 @@ const Skills = () => {
               </Item>
             </Grid>
 
-            <Grid item xs={6} md={2}>
+            <Grid item xs={6} md={2} id="skills">
               <Item>
                 <Box
                   sx={{
@@ -145,7 +144,7 @@ const Skills = () => {
               </Item>
             </Grid>
 
-            <Grid item xs={6} md={2}>
+            <Grid item xs={6} md={2} id="skills">
               <Item>
                 <Box
                   sx={{
@@ -163,7 +162,7 @@ const Skills = () => {
               </Item>
             </Grid>
 
-            <Grid item xs={6} md={2}>
+            <Grid item xs={6} md={2} id="skills">
               <Item>
                 <Box
                   sx={{
@@ -180,7 +179,7 @@ const Skills = () => {
                 </Box>
               </Item>
             </Grid>
-            <Grid item xs={6} md={2}>
+            <Grid item xs={6} md={2} id="skills">
               <Item>
                 <Box
                   sx={{
@@ -197,7 +196,7 @@ const Skills = () => {
                 </Box>
               </Item>
             </Grid>
-            <Grid item xs={6} md={2}>
+            <Grid item xs={6} md={2} id="skills">
               <Item>
                 <Box
                   sx={{
@@ -214,7 +213,7 @@ const Skills = () => {
                 </Box>
               </Item>
             </Grid>
-            <Grid item xs={6} md={2}>
+            <Grid item xs={6} md={2} id="skills">
               <Item>
                 <Box
                   sx={{

@@ -35,25 +35,25 @@ const responsive = {
 
 const Projects = () => {
   return (
-    <div style={{ background: "#000000" }} id="projects">
+    <div id="projects">
       <Box
         sx={{
           flexGrow: 1,
-          background: "#000000",
           color: "#9318EE",
           width: { md: "950px", sm: "auto" },
           margin: "auto",
         }}
         pt={10}
+        id="projectBox"
       >
         <Typography
           variant="h4"
+          id="heading"
           sx={{
-            color: "#FFFFFF",
             textAlign: "center",
-            borderBottom: "4px solid #9318EE",
-            borderLeft: "4px solid #9318EE",
-            width: "160px",
+            borderBottom: "4px solid #2C3333",
+            borderLeft: "4px solid #2C3333",
+            width: "140px",
             margin: "auto",
           }}
         >
@@ -65,7 +65,12 @@ const Projects = () => {
             <Grid item md={6} mx={1} my={5}>
               <div>
                 <Paper>
-                  <Card sx={{ maxWidth: 445, height: "460px" }}>
+                  <Card
+                    sx={{
+                      maxWidth: 345,
+                      height: "460px",
+                    }}
+                  >
                     <CardMedia
                       sx={{ height: 190 }}
                       image={projectOneImg}
@@ -93,11 +98,12 @@ const Projects = () => {
                         <Button
                           variant="contained"
                           sx={{
-                            margin: "5px",
-                            bgcolor: "#9318EE",
+                            bgcolor: "#2C3333",
                             "&:hover": {
-                              backgroundColor: "#9318EE",
+                              backgroundColor: "#E7F6F2",
+                              color: "#2C3333",
                             },
+                            color: "#E7F6F2",
                           }}
                         >
                           GIT Link
@@ -112,10 +118,12 @@ const Projects = () => {
                         <Button
                           variant="contained"
                           sx={{
-                            bgcolor: "#9318EE",
+                            bgcolor: "#2C3333",
                             "&:hover": {
-                              backgroundColor: "#9318EE",
+                              backgroundColor: "#E7F6F2",
+                              color: "#2C3333",
                             },
+                            color: "#E7F6F2",
                           }}
                         >
                           Demo
@@ -127,10 +135,15 @@ const Projects = () => {
               </div>
             </Grid>
 
-            <Grid item md={6} mx={1} my={5}>
+            <Grid item md={6} mx={2} my={5}>
               <div>
                 <Paper>
-                  <Card sx={{ maxWidth: 345, height: "460px" }}>
+                  <Card
+                    sx={{
+                      maxWidth: 345,
+                      height: "460px",
+                    }}
+                  >
                     <CardMedia
                       sx={{ height: 190 }}
                       image={projectTwoImg}
@@ -160,11 +173,12 @@ const Projects = () => {
                         <Button
                           variant="contained"
                           sx={{
-                            margin: "5px",
-                            bgcolor: "#9318EE",
+                            bgcolor: "#2C3333",
                             "&:hover": {
-                              backgroundColor: "#9318EE",
+                              backgroundColor: "#E7F6F2",
+                              color: "#2C3333",
                             },
+                            color: "#E7F6F2",
                           }}
                         >
                           GIT Link
@@ -179,10 +193,12 @@ const Projects = () => {
                         <Button
                           variant="contained"
                           sx={{
-                            bgcolor: "#9318EE",
+                            bgcolor: "#2C3333",
                             "&:hover": {
-                              backgroundColor: "#9318EE",
+                              backgroundColor: "#E7F6F2",
+                              color: "#2C3333",
                             },
+                            color: "#E7F6F2",
                           }}
                         >
                           Demo
@@ -197,11 +213,16 @@ const Projects = () => {
             <Grid item md={6} mx={1} my={5}>
               <div>
                 <Paper>
-                  <Card sx={{ maxWidth: 345, height: "460px" }}>
+                  <Card
+                    sx={{
+                      maxWidth: 345,
+                      height: "460px",
+                    }}
+                  >
                     <CardMedia
                       sx={{ height: 190 }}
                       image={projectThirdImg}
-                      title="Clone of HealthKart"
+                      title="Clone of Gearbest"
                     />
                     <CardContent>
                       <Typography gutterBottom variant="h5" component="div">
@@ -209,9 +230,8 @@ const Projects = () => {
                       </Typography>
                       <Typography variant="body2">
                         The Landing Page of Gearbest website displays various
-                        products and categories, In headers displays search bar,
-                        login, and cart pages, created image carousal, and at
-                        the bottom section there is a footer.
+                        products and categories. we can buy on this website
+                        electronic items.
                       </Typography>
                       <Typography mt={1} variant="body2">
                         Used tech-stack : HTML | CSS | Javascript | Nodejs
@@ -227,11 +247,12 @@ const Projects = () => {
                         <Button
                           variant="contained"
                           sx={{
-                            margin: "0px 5px ",
-                            bgcolor: "#9318EE",
+                            bgcolor: "#2C3333",
                             "&:hover": {
-                              backgroundColor: "#9318EE",
+                              backgroundColor: "#E7F6F2",
+                              color: "#2C3333",
                             },
+                            color: "#E7F6F2",
                           }}
                         >
                           GIT Link
@@ -246,10 +267,12 @@ const Projects = () => {
                         <Button
                           variant="contained"
                           sx={{
-                            bgcolor: "#9318EE",
+                            bgcolor: "#2C3333",
                             "&:hover": {
-                              backgroundColor: "#9318EE",
+                              backgroundColor: "#E7F6F2",
+                              color: "#2C3333",
                             },
+                            color: "#E7F6F2",
                           }}
                         >
                           Demo
@@ -264,7 +287,12 @@ const Projects = () => {
             <Grid item md={6} mx={1} my={5}>
               <div>
                 <Paper>
-                  <Card sx={{ maxWidth: 345, height: "460px" }}>
+                  <Card
+                    sx={{
+                      maxWidth: 345,
+                      height: "460px",
+                    }}
+                  >
                     <CardMedia
                       sx={{ height: 190 }}
                       image={projectFourthImg}
@@ -293,11 +321,12 @@ const Projects = () => {
                         <Button
                           variant="contained"
                           sx={{
-                            margin: "5px",
-                            bgcolor: "#9318EE",
+                            bgcolor: "#2C3333",
                             "&:hover": {
-                              backgroundColor: "#9318EE",
+                              backgroundColor: "#E7F6F2",
+                              color: "#2C3333",
                             },
+                            color: "#E7F6F2",
                           }}
                         >
                           GIT Link
@@ -312,10 +341,12 @@ const Projects = () => {
                         <Button
                           variant="contained"
                           sx={{
-                            bgcolor: "#9318EE",
+                            bgcolor: "#2C3333",
                             "&:hover": {
-                              backgroundColor: "#9318EE",
+                              backgroundColor: "#E7F6F2",
+                              color: "#2C3333",
                             },
+                            color: "#E7F6F2",
                           }}
                         >
                           Demo
