@@ -38,19 +38,26 @@ const Home = () => {
                 </Typography>
               </Box>
               <Box p={2}>
-                <Button
-                  variant="contained"
-                  sx={{
-                    bgcolor: "#2C3333",
-                    "&:hover": {
-                      backgroundColor: "#E7F6F2",
-                      color: "#2C3333",
-                    },
-                    color: "#E7F6F2",
-                  }}
+                <a
+                  href="https://drive.google.com/file/d/1VCFOzW26l5n7CAiaYdAYHAbebOP96bmR/view?usp=sharing"
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{ textDecoration: "none" }}
                 >
-                  Get Resume
-                </Button>
+                  <Button
+                    variant="contained"
+                    sx={{
+                      bgcolor: "#2C3333",
+                      "&:hover": {
+                        backgroundColor: "#E7F6F2",
+                        color: "#2C3333",
+                      },
+                      color: "#E7F6F2",
+                    }}
+                  >
+                    Get Resume
+                  </Button>
+                </a>
               </Box>
             </Grid>
           </Box>
