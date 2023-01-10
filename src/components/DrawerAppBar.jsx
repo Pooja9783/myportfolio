@@ -19,7 +19,6 @@ import Switch from "@mui/material/Switch";
 import Link from "@mui/material/Link";
 
 const drawerWidth = 240;
-const navItems = ["Home", "About", "Skills", "Projects", "Contact"];
 
 function DrawerAppBar(props) {
   const { toggleTheme } = useContext(ThemeContext);
@@ -67,7 +66,7 @@ function DrawerAppBar(props) {
       <CssBaseline />
       <AppBar
         component="nav"
-        sx={{ background: "#000000", height: "70px" }}
+        sx={{ background: "#000000", height: "70px", }}
         id="appBar"
       >
         <Toolbar>
@@ -99,7 +98,7 @@ function DrawerAppBar(props) {
           <Typography
             variant="h6"
             component="div"
-            sx={{ ml: 10, flexGrow: 1, display: { xs: "none", sm: "block" } }}
+            sx={{  flexGrow: 4, display: { xs: "none", sm: "block" } }}
             id="logo"
           >
             Pooja Sankhala
