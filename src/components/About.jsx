@@ -35,8 +35,8 @@ const About = () => {
             <img
               src={myImage}
               style={{
-                width: "300px",
-                height: "300px",
+                width: "250px",
+                height: "250px",
                 border: "2px solid #2C3333",
                 borderRadius: "50%",
                 display: "block",
