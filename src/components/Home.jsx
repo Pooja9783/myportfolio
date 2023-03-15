@@ -1,5 +1,8 @@
 import React from "react";
 import { Box, Typography, Toolbar, Grid, Button } from "@mui/material";
+import CloudDownloadIcon from "@mui/icons-material/CloudDownload";
+import resume from "../img/Pooja-Sankhala-Resume.pdf";
+
 const Home = () => {
   return (
     <div>
@@ -39,7 +42,7 @@ const Home = () => {
               </Box>
               <Box p={2}>
                 <a
-                  href="https://drive.google.com/file/d/1RK1D9eapjQFh_dRCF_BA8ZjePa6fwXHa/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1I_KQyMRyony2qDyP_HopPmYdOdkehuYt/view?usp=sharing"
                   target="_blank"
                   rel="noreferrer"
                   style={{ textDecoration: "none" }}
@@ -49,13 +52,27 @@ const Home = () => {
                     sx={{
                       bgcolor: "#2C3333",
                       "&:hover": {
-                        backgroundColor: "#E7F6F2",
-                        color: "#2C3333",
+                        backgroundColor: "#2C3333",
+                        color: "#E7F6F2",
                       },
                       color: "#E7F6F2",
                     }}
                   >
                     Get Resume
+                    <a
+                      href={resume}
+                      download="Pooja-Sankhala-Resume"
+                      target="_blank"
+                      rel="noreferrer"
+                      style={{
+                        textDecoration: "none",
+                        display: "flex",
+                        color: "#e7f6f2",
+                        marginLeft:"10px"
+                      }}
+                    >
+                      <CloudDownloadIcon />
+                    </a>
                   </Button>
                 </a>
               </Box>

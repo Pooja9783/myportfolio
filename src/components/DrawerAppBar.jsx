@@ -9,14 +9,13 @@ import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
 import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Switch from "@mui/material/Switch";
 import Link from "@mui/material/Link";
+import CloudDownloadIcon from "@mui/icons-material/CloudDownload";
+import resume from "../img/Pooja-Sankhala-Resume.pdf";
 
 const drawerWidth = 240;
 
@@ -66,7 +65,7 @@ function DrawerAppBar(props) {
       <CssBaseline />
       <AppBar
         component="nav"
-        sx={{ background: "#000000", height: "70px", }}
+        sx={{ background: "#000000", height: "70px" }}
         id="appBar"
       >
         <Toolbar>
@@ -98,7 +97,7 @@ function DrawerAppBar(props) {
           <Typography
             variant="h6"
             component="div"
-            sx={{  flexGrow: 4, display: { xs: "none", sm: "block" } }}
+            sx={{ flexGrow: 4, display: { xs: "none", sm: "block" } }}
             id="logo"
           >
             Pooja Sankhala
@@ -119,7 +118,33 @@ function DrawerAppBar(props) {
             <Link href="#contact" underline="none" m={2}>
               <Typography id="heading">{"Contact"}</Typography>
             </Link>
-            <Box mr={10} mt={1}>
+            <Box m={2} display="flex" sx={{ cursor: "pointer" }}>
+              <a
+                href="https://drive.google.com/file/d/1I_KQyMRyony2qDyP_HopPmYdOdkehuYt/view?usp=sharing"
+                target="_blank"
+                rel="noreferrer"
+                style={{
+                  textDecoration: "none",
+                  display: "flex",
+                  color: "#395b64",
+                }}
+              >
+                <Typography id="heading" mr={0.5}>
+                  {"Resume"}
+                </Typography>
+                <a href={resume} download="Pooja-Sankhala-Resume" 
+                target="_blank"
+                rel="noreferrer"
+                style={{
+                  textDecoration: "none",
+                  display: "flex",
+                  color: "#395b64",
+                }}>
+                  <CloudDownloadIcon />
+                </a>
+              </a>
+            </Box>
+            <Box mr={8} mt={1}>
               <Switch onChange={toggleTheme} color="default" />
             </Box>
           </Box>

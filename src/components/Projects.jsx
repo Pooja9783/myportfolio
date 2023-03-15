@@ -62,7 +62,7 @@ const Projects = () => {
         </Typography>
         <Box p={2}>
           <Carousel responsive={responsive}>
-            <Grid item md={6} mx={1} my={5}>
+            <Grid item md={6} mx={1} my={5} >
               <div>
                 <Paper>
                   <Card

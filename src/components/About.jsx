@@ -31,35 +31,29 @@ const About = () => {
         </Typography>
 
         <Grid container spacing={2} mt={10}>
-          <Grid item xs={12} md={4} m={2} mt={5}>
+          <Grid item xs={12} md={4} m={2} mt={1}>
             <img
               src={myImage}
               style={{
                 width: "250px",
                 height: "250px",
+                objectFit: "cover",
                 border: "2px solid #2C3333",
                 borderRadius: "50%",
                 display: "block",
-                marginLeft: "auto",
-                marginRight: "auto",
+                
               }}
               alt={"Pooja"}
             />{" "}
           </Grid>
-          <Grid item xs={12} md={7} m={2}>
-            <Typography variant="h5" id="heading">
-              Having completed my Graduation in Arts, I never thought that I
-              would be interested in becoming anything close to a full-stack web
-              developer. When I was searching for a job as a data entry operator
-              on LinkedIn, I came across a post related to programming. So I
-              searched on google about it, got interested, and started to learn
-              HTML, CSS & Javascript. Programming attracted me further, and I
-              kept pursuing it, and that's when I began my journey towards
-              becoming a full-stack web.
+          <Grid item xs={12} md={7} m={2} >
+            <Typography variant="h5" id="heading" mt={2}>
+              A passionate full-stack web developer, dedicated to develope
+              robust web application. Having interest to learn new technologies
+              and build web apps. Problem-solving mindset with a goal to optimize
+              application for better stability and speed. Love to work in a
+              team.
               <br />
-              <br />I always wanted to have a professional career but couldn't
-              figure out my way to a job. So, after completing my Post
-              Graduation, I started exploring my career options.
             </Typography>
           </Grid>
         </Grid>
