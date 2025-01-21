@@ -15,7 +15,7 @@ import Typography from "@mui/material/Typography";
 import Switch from "@mui/material/Switch";
 import Link from "@mui/material/Link";
 import CloudDownloadIcon from "@mui/icons-material/CloudDownload";
-import resume from "../img/Pooja-Sankhala-Resume.pdf";
+import resume from "../img/Pooja_Sankhala.pdf";
 
 const drawerWidth = 240;
 
@@ -120,7 +120,7 @@ function DrawerAppBar(props) {
             </Link>
             <Box m={2} display="flex" sx={{ cursor: "pointer" }}>
               <a
-                href="https://drive.google.com/file/d/1SlBvMZdMYmoWdmmPGnGEgU57M-Up70gd/view?usp=share_link"
+                href="https://drive.google.com/file/d/1gvjIYG5wjGJKyumKKjarcfT0g1aTsino/view?usp=drive_link"
                 target="_blank"
                 rel="noreferrer"
                 style={{

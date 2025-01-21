@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Typography, Toolbar, Grid, Button } from "@mui/material";
 import CloudDownloadIcon from "@mui/icons-material/CloudDownload";
-import resume from "../img/Pooja-Sankhala-Resume.pdf";
+import resume from "../img/Pooja_Sankhala.pdf";
 
 const Home = () => {
   return (
@@ -42,7 +42,7 @@ const Home = () => {
               </Box>
               <Box p={2}>
                 <a
-                  href="https://drive.google.com/file/d/1wNGYQhKxohVZGDGgTDFtamzs2-yh8D2I/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1gvjIYG5wjGJKyumKKjarcfT0g1aTsino/view?usp=drive_link"
                   target="_blank"
                   rel="noreferrer"
                   style={{ textDecoration: "none" }}
