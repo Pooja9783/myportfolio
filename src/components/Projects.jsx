@@ -11,11 +11,9 @@ import "react-multi-carousel/lib/styles.css";
 import projectOneImg from "../img/project-1.png";
 import projectTwoImg from "../img/project-2.png";
 import projectThirdImg from "../img/project-3.png";
-import projectFourthImg from "../img/project-4.png";
 
 const responsive = {
   superLargeDesktop: {
-    // the naming can be any, depends on you.
     breakpoint: { max: 4000, min: 3000 },
     items: 5,
   },
@@ -62,35 +60,36 @@ const Projects = () => {
         </Typography>
         <Box p={2}>
           <Carousel responsive={responsive}>
-            <Grid item md={6} mx={1} my={5} >
+            <Grid item md={6} mx={1} my={5}>
               <div>
                 <Paper>
                   <Card
                     sx={{
                       maxWidth: 345,
                       height: "460px",
+                    
                     }}
                   >
                     <CardMedia
-                      sx={{ height: 190 }}
+                      sx={{ height: 190, border:'6px solid #E7F6F2' }}
                       image={projectOneImg}
-                      title="Clone of HealthKart"
+                      title="Shop Bazar"
                     />
                     <CardContent>
                       <Typography gutterBottom variant="h5" component="div">
-                        Clone of HealthKart
+                        Shop Bazar
                       </Typography>
                       <Typography variant="body2">
-                        Built authentication and integrated it with
-                        functionallity of Home Page And Signup & Signin pages.
+                        An easy-to-use e-commerce app with login/signup, product
+                        filtering, shopping cart, and secure payment.
                       </Typography>
                       <Typography mt={1} variant="body2">
-                        Used tech-stack : HTML | CSS | Javascript
+                        Used tech-stack :Reactjs | Javascript | HTML | CSS |
                       </Typography>
                     </CardContent>
                     <CardActions>
                       <a
-                        href="https://github.com/hramdas/HealthKart"
+                        href="https://github.com/Pooja9783/shop-bazar"
                         target="_blank"
                         rel="noreferrer"
                         style={{ textDecoration: "none" }}
@@ -110,7 +109,7 @@ const Projects = () => {
                         </Button>
                       </a>
                       <a
-                        href="https://healthkart.hramdas.in/"
+                        href="https://shop-bazar-app.netlify.app"
                         target="_blank"
                         rel="noreferrer"
                         style={{ textDecoration: "none" }}
@@ -145,27 +144,26 @@ const Projects = () => {
                     }}
                   >
                     <CardMedia
-                      sx={{ height: 190 }}
+                      sx={{ height: 190, border:'6px solid #E7F6F2' }}
                       image={projectTwoImg}
-                      title="Clone of HealthKart"
+                      title="Share Me"
                     />
                     <CardContent>
                       <Typography gutterBottom variant="h5" component="div">
-                        Clone of Swiggy
+                        Share Me
                       </Typography>
                       <Typography variant="body2">
-                        I have made clone of Swiggy where users can order food.
-                        I implemented search functionalities, user
-                        authentication, filter, and sorting.
+                        A platform for uploading, viewing, and downloading
+                        images with Google login authentication.
                       </Typography>
                       <Typography mt={1} variant="body2">
-                        Used tech-stack : HTML | CSS | Javascript | Nodejs |
+                        Used tech-stack : HTML | CSS | Javascript | Sanity |
                         ReactJs |
                       </Typography>
                     </CardContent>
                     <CardActions>
                       <a
-                        href="https://github.com/Pooja9783/swiggy-clone"
+                        href="https://github.com/Pooja9783/share-me-app"
                         target="_blank"
                         rel="noreferrer"
                         style={{ textDecoration: "none" }}
@@ -185,7 +183,7 @@ const Projects = () => {
                         </Button>
                       </a>
                       <a
-                        href="https://swiggy-website-clone.netlify.app/"
+                        href="https://share-me-app-one.vercel.app/"
                         target="_blank"
                         rel="noreferrer"
                         style={{ textDecoration: "none" }}
@@ -220,100 +218,26 @@ const Projects = () => {
                     }}
                   >
                     <CardMedia
-                      sx={{ height: 190 }}
+                      sx={{ height: 190, border:'6px solid #E7F6F2' }}
                       image={projectThirdImg}
-                      title="Clone of Gearbest"
-                    />
-                    <CardContent>
-                      <Typography gutterBottom variant="h5" component="div">
-                        Clone of Gearbest
-                      </Typography>
-                      <Typography variant="body2">
-                        The Landing Page of Gearbest website displays various
-                        products and categories. we can buy on this website
-                        electronic items.
-                      </Typography>
-                      <Typography mt={1} variant="body2">
-                        Used tech-stack : HTML | CSS | Javascript | Nodejs
-                      </Typography>
-                    </CardContent>
-                    <CardActions>
-                      <a
-                        href="https://github.com/Pooja9783/gearbest"
-                        target="_blank"
-                        rel="noreferrer"
-                        style={{ textDecoration: "none" }}
-                      >
-                        <Button
-                          variant="contained"
-                          sx={{
-                            bgcolor: "#2C3333",
-                            "&:hover": {
-                              backgroundColor: "#E7F6F2",
-                              color: "#2C3333",
-                            },
-                            color: "#E7F6F2",
-                          }}
-                        >
-                          GIT Link
-                        </Button>
-                      </a>
-                      <a
-                        href="https://gearbest-clone.netlify.app/"
-                        target="_blank"
-                        rel="noreferrer"
-                        style={{ textDecoration: "none" }}
-                      >
-                        <Button
-                          variant="contained"
-                          sx={{
-                            bgcolor: "#2C3333",
-                            "&:hover": {
-                              backgroundColor: "#E7F6F2",
-                              color: "#2C3333",
-                            },
-                            color: "#E7F6F2",
-                          }}
-                        >
-                          Demo
-                        </Button>
-                      </a>
-                    </CardActions>
-                  </Card>
-                </Paper>
-              </div>
-            </Grid>
-
-            <Grid item md={6} mx={1} my={5}>
-              <div>
-                <Paper>
-                  <Card
-                    sx={{
-                      maxWidth: 345,
-                      height: "460px",
-                    }}
-                  >
-                    <CardMedia
-                      sx={{ height: 190 }}
-                      image={projectFourthImg}
                       title="Clone of HealthKart"
                     />
                     <CardContent>
                       <Typography gutterBottom variant="h5" component="div">
-                        Clone of Realme
+                        Chat App
                       </Typography>
                       <Typography variant="body2">
-                        We developed and designed a mobile and other
-                        technological products site using ReactJs and Styled
-                        components hosted on heroku.
+                        A real-time chat app using WebSocket, MongoDB, Node.js,
+                        and Express for instant messaging.
                       </Typography>
                       <Typography mt={1} variant="body2">
-                        Used tech-stack :| Nodejs | ReactJs | styled-components
+                        Used tech-stack :| Nodejs | ReactJs | ExpressJs |
+                        MongoDB | Web Socket
                       </Typography>
                     </CardContent>
                     <CardActions>
                       <a
-                        href="https://github.com/jaidev3/Realme-Clone"
+                        href="https://github.com/Pooja9783/message-app"
                         target="_blank"
                         rel="noreferrer"
                         style={{ textDecoration: "none" }}
@@ -333,7 +257,7 @@ const Projects = () => {
                         </Button>
                       </a>
                       <a
-                        href="https://realme-masai.herokuapp.com/"
+                        href="https://message-app-prod.onrender.com/"
                         target="_blank"
                         rel="noreferrer"
                         style={{ textDecoration: "none" }}

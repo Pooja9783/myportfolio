@@ -123,6 +123,7 @@ function DrawerAppBar(props) {
                 href="https://drive.google.com/file/d/1gvjIYG5wjGJKyumKKjarcfT0g1aTsino/view?usp=drive_link"
                 target="_blank"
                 rel="noreferrer"
+                download="Pooja-Sankhala-Resume" 
                 style={{
                   textDecoration: "none",
                   display: "flex",
@@ -133,7 +134,6 @@ function DrawerAppBar(props) {
                   {"Resume"}
                 </Typography>
                 <a href={resume} download="Pooja-Sankhala-Resume" 
-                target="_blank"
                 rel="noreferrer"
                 style={{
                   textDecoration: "none",
