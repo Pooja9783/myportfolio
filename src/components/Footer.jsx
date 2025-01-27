@@ -10,7 +10,7 @@ const Footer = () => {
         }}
         p={1}
       >
-        <Typography id="heading">Made by Pooja 2023.</Typography>
+        <Typography id="heading">Made by Pooja 2025.</Typography>
       </Box>
     </div>
   );
