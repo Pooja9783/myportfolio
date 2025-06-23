@@ -120,7 +120,7 @@ function DrawerAppBar(props) {
             </Link>
             <Box m={2} display="flex" sx={{ cursor: "pointer" }}>
               <a
-                href="https://drive.google.com/file/d/10n_uPyb2JtY8UXscxAwAnu31ks9u7MvQ/view?usp=sharing"
+                href="https://drive.google.com/file/d/1t5aMsDHBIa4R94XmKYijURzzqJ0uxtuU/view"
                 target="_blank"
                 rel="noreferrer"
                 download="Pooja-Sankhala-Resume" 
