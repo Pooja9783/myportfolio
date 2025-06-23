@@ -42,7 +42,7 @@ const Home = () => {
               </Box>
               <Box p={2}>
                 <a
-                  href="https://drive.google.com/file/d/1t5aMsDHBIa4R94XmKYijURzzqJ0uxtuU/view?usp=drive_link"
+                  href="https://drive.google.com/file/d/1t5aMsDHBIa4R94XmKYijURzzqJ0uxtuU/view?usp=sharing"
                   target="_blank"
                   rel="noreferrer"
                   style={{ textDecoration: "none" }}
