@@ -15,7 +15,7 @@ import Typography from "@mui/material/Typography";
 import Switch from "@mui/material/Switch";
 import Link from "@mui/material/Link";
 import CloudDownloadIcon from "@mui/icons-material/CloudDownload";
-import resume from "../img/Pooja_Sankhala.pdf";
+import resume from "../img/Pooja_Sankhala_Software_Engineer.pdf";
 
 const drawerWidth = 240;
 
