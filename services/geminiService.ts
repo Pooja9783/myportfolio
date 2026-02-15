@@ -2,14 +2,34 @@
 import { GoogleGenAI } from "@google/genai";
 import { SYSTEM_INSTRUCTION } from "../constants";
 
-// Updated the history type to use { text: string }[] instead of the tuple [{ text: string }] 
-// to resolve type incompatibility in AIChat.tsx (line 34).
 export const chatWithAI = async (message: string, history: { role: 'user' | 'model', parts: { text: string }[] }[]) => {
-  // Always create a new instance right before making an API call to ensure it uses the latest API key.
-  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+  // Check if we are running on the deployed Netlify site
+  const isProduction = window.location.hostname.includes('netlify.app');
+
+  if (isProduction) {
+    try {
+      // Call our own secure backend function instead of the Google API directly
+      const response = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message, history })
+      });
+      
+      if (!response.ok) throw new Error('Proxy request failed');
+      
+      const data = await response.json();
+      return data.text;
+    } catch (error) {
+      console.error('Secure proxy failed, checking fallback...', error);
+      // Fallback logic continues below if proxy fails
+    }
+  }
+
+  // --- Development / Preview Fallback ---
+  // If we are on localhost or the proxy failed, use the direct SDK 
+  // (This ensures your local preview here still works!)
+  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
   
-  // Using 'gemini-3-flash-preview' for basic text chat tasks.
-  // SYSTEM_INSTRUCTION is provided via the config.systemInstruction parameter.
   const response = await ai.models.generateContent({
     model: 'gemini-3-flash-preview',
     contents: [
@@ -23,6 +43,5 @@ export const chatWithAI = async (message: string, history: { role: 'user' | 'mod
     }
   });
 
-  // The GenerateContentResponse features a text property that directly returns the output string.
   return response.text;
 };
