@@ -1,0 +1,9 @@
+
+{
+  "name": "MERN Stack Dev Portfolio AI",
+  "description": "A high-performance portfolio for a MERN Stack Developer with 4 years of experience, featuring an integrated Gemini-powered AI assistant for interactive Q&A.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
