@@ -1,51 +1,134 @@
 
-import React from 'react';
-import { PERSONAL_INFO } from '../constants';
+import React from "react";
+import {
+  ArrowRight,
+  Sparkles,
+  Code2,
+  BrainCircuit,
+} from "lucide-react";
 
 const Hero: React.FC = () => {
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center pt-32 pb-20 overflow-hidden">
-      {/* Background elements */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[600px] bg-indigo-500/5 dark:bg-indigo-600/10 rounded-full blur-[120px] pointer-events-none"></div>
-      
-      <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
-        <div className="mb-8 inline-flex items-center gap-2 px-4 py-2 rounded-full border border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm animate-fade-in shadow-sm">
-          <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
-          </span>
-          <span className="text-[10px] font-black uppercase tracking-widest text-slate-500 dark:text-slate-400">
-            Available for high-impact roles
-          </span>
-        </div>
-        
-        <h1 className="text-6xl md:text-9xl font-black mb-8 leading-[0.9] tracking-tighter text-slate-950 dark:text-white">
-          Architecting <br />
-          <span className="bg-gradient-to-r from-indigo-600 via-blue-500 to-cyan-500 dark:from-indigo-400 dark:via-blue-400 dark:to-emerald-400 bg-clip-text text-transparent">
-            Digital Future.
-          </span>
-        </h1>
-        
-        <p className="max-w-3xl mx-auto text-xl md:text-2xl text-slate-600 dark:text-slate-400 mb-12 leading-relaxed font-medium">
-          I'm <span className="font-bold text-slate-900 dark:text-white">Pooja Sankhala</span>. A Senior MERN Engineer building scalable web ecosystems with architectural precision and high-performance code.
-        </p>
+    <section
+      id="hero"
+      className="relative min-h-screen overflow-hidden bg-[#0C0A09]"
+    >
+      {/* Background Glow */}
+      <div className="pointer-events-none absolute right-0 top-20 h-[500px] w-[500px] rounded-full bg-orange-500/10 blur-[140px]" />
 
-        <div className="flex flex-col sm:flex-row gap-6 justify-center">
-          <a 
-            href="#projects" 
-            className="group relative px-10 py-4 bg-slate-950 dark:bg-white text-white dark:text-slate-950 font-black rounded-2xl overflow-hidden shadow-2xl transition-all hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-3"
-          >
-            <span className="relative z-10">Explores Works</span>
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 group-hover:translate-x-1 transition-transform relative z-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-            </svg>
-          </a>
-          <a 
-            href="#ai-chat" 
-            className="group px-10 py-4 bg-white dark:bg-slate-900 text-slate-900 dark:text-white font-black rounded-2xl border-2 border-slate-200 dark:border-slate-800 hover:border-indigo-500 dark:hover:border-indigo-400 transition-all flex items-center justify-center gap-3 active:scale-95"
-          >
-            Ask My AI
-          </a>
+      {/* Consistent Container */}
+      <div className="mx-auto flex min-h-screen w-full max-w-7xl items-center px-6 pt-20 lg:px-8">
+
+        <div className="grid w-full items-center gap-16 lg:grid-cols-2">
+
+          {/* Left Content */}
+          <div>
+
+            {/* Badge */}
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#292524] bg-[#1C1917] px-4 py-2">
+              <Sparkles size={15} className="text-[#F97316]" />
+
+              <span className="text-sm font-medium text-[#A8A29E]">
+                Full Stack Developer & AI Enthusiast
+              </span>
+            </div>
+
+            {/* Heading */}
+            <p className="mb-4 text-lg font-medium text-[#A8A29E]">
+              Hi, I'm
+            </p>
+
+            <h1 className="text-5xl font-bold tracking-tight text-[#FAFAF9] md:text-6xl">
+              Pooja Sankhala.
+            </h1>
+
+            <h2 className="mt-3 text-2xl font-semibold text-[#F97316] md:text-3xl">
+              I build modern web applications.
+            </h2>
+
+            {/* Description */}
+            <p className="mt-6 max-w-xl text-base leading-8 text-[#A8A29E] md:text-lg">
+              I'm a Full Stack Developer working with modern web technologies
+              and exploring how Artificial Intelligence can create smarter,
+              more useful digital products.
+            </p>
+
+            {/* Buttons */}
+            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+
+              <a
+                href="#projects"
+                className="group flex items-center justify-center gap-2 rounded-xl bg-[#F97316] px-6 py-3.5 font-semibold text-white transition-all hover:bg-[#EA580C] hover:shadow-lg hover:shadow-orange-500/20"
+              >
+                View Projects
+
+                <ArrowRight
+                  size={18}
+                  className="transition-transform group-hover:translate-x-1"
+                />
+              </a>
+
+              <a
+                href="mailto:poojasankhala.dev@gmail.com"
+                className="flex items-center justify-center rounded-xl border border-[#292524] bg-[#1C1917] px-6 py-3.5 font-semibold text-[#FAFAF9] transition-all hover:border-[#F97316] hover:text-[#F97316]"
+              >
+                Let's Talk
+              </a>
+
+            </div>
+          </div>
+
+          {/* Right Visual */}
+          <div className="relative flex justify-center lg:justify-end">
+
+            <div className="relative w-full max-w-md rounded-3xl border border-[#292524] bg-[#1C1917] p-8 shadow-2xl">
+
+              {/* Decorative top bar */}
+              <div className="mb-8 flex gap-2">
+                <span className="h-3 w-3 rounded-full bg-red-400" />
+                <span className="h-3 w-3 rounded-full bg-yellow-400" />
+                <span className="h-3 w-3 rounded-full bg-green-400" />
+              </div>
+
+              {/* Code Block */}
+              <div className="space-y-4 font-mono text-sm">
+
+                <p className="text-[#F97316]">
+                  const developer = {"{"}
+                </p>
+
+                <p className="pl-4 text-[#FAFAF9]">
+                  name: <span className="text-[#FACC15]">"Pooja"</span>,
+                </p>
+
+                <p className="pl-4 text-[#FAFAF9]">
+                  role: <span className="text-[#FACC15]">
+                    "Full Stack Developer"
+                  </span>,
+                </p>
+
+                <p className="pl-4 text-[#FAFAF9]">
+                  passion: <span className="text-[#FACC15]">
+                    "Building & Learning"
+                  </span>
+                </p>
+
+                <p className="text-[#F97316]">{"}"}</p>
+
+              </div>
+
+              {/* Floating Icons */}
+              <div className="absolute -left-6 -top-6 flex h-14 w-14 items-center justify-center rounded-2xl border border-[#292524] bg-[#1C1917] shadow-xl">
+                <Code2 className="text-[#F97316]" size={25} />
+              </div>
+
+              <div className="absolute -bottom-6 -right-6 flex h-14 w-14 items-center justify-center rounded-2xl border border-[#292524] bg-[#1C1917] shadow-xl">
+                <BrainCircuit className="text-[#FACC15]" size={25} />
+              </div>
+
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -53,3 +136,4 @@ const Hero: React.FC = () => {
 };
 
 export default Hero;
+

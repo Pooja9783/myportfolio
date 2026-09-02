@@ -1,13 +1,25 @@
 
-import React, { useState, useRef, useEffect } from 'react';
-import { chatWithAI } from '../services/geminiService';
-import { Message } from '../types';
+import React, { useEffect, useRef, useState } from "react";
+import { ArrowUpRight, Sparkles } from "lucide-react";
+import { chatWithAI } from "../services/geminiService";
+import { Message } from "../types";
+
+const SUGGESTED_QUESTIONS = [
+  "What is Pooja's experience with MERN?",
+  "Tell me about her GenAI work",
+  "What technologies does she work with?",
+];
 
 const AIChat: React.FC = () => {
   const [messages, setMessages] = useState<Message[]>([
-    { role: 'model', text: "Hi! I'm Pooja's AI assistant. You can ask me about her experience at CoffeeWeb, her skills in React/Node, or her favorite projects like Chat MERN App!", timestamp: new Date() }
+    {
+      role: "model",
+      text: "Hi, I'm Pooja's AI assistant. Ask me anything about her experience, technical skills, projects, or the products she's worked on.",
+      timestamp: new Date(),
+    },
   ]);
-  const [input, setInput] = useState('');
+
+  const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -17,114 +29,214 @@ const AIChat: React.FC = () => {
     }
   }, [messages, isLoading]);
 
-  const handleSend = async () => {
-    if (!input.trim() || isLoading) return;
+  const handleSend = async (question?: string) => {
+    const text = question || input;
 
-    const userMessage: Message = { role: 'user', text: input, timestamp: new Date() };
-    setMessages(prev => [...prev, userMessage]);
-    setInput('');
+    if (!text.trim() || isLoading) return;
+
+    const userMessage: Message = {
+      role: "user",
+      text,
+      timestamp: new Date(),
+    };
+
+    setMessages((prev) => [...prev, userMessage]);
+    setInput("");
     setIsLoading(true);
 
     try {
-      const history = messages.slice(-6).map(m => ({
-        role: m.role,
-        parts: [{ text: m.text }]
+      const history = messages.slice(-6).map((message) => ({
+        role: message.role,
+        parts: [{ text: message.text }],
       }));
 
-      const aiResponse = await chatWithAI(input, history);
-      const modelMessage: Message = { role: 'model', text: aiResponse || "I'm sorry, I encountered a slight issue. Could you try again?", timestamp: new Date() };
-      setMessages(prev => [...prev, modelMessage]);
+      const aiResponse = await chatWithAI(text, history);
+
+      setMessages((prev) => [
+        ...prev,
+        {
+          role: "model",
+          text:
+            aiResponse ||
+            "I couldn't generate a response right now. Please try again.",
+          timestamp: new Date(),
+        },
+      ]);
     } catch (error) {
       console.error(error);
-      setMessages(prev => [...prev, { role: 'model', text: "I'm offline right now. Please make sure the API key is configured.", timestamp: new Date() }]);
+
+      setMessages((prev) => [
+        ...prev,
+        {
+          role: "model",
+          text: "I'm currently unavailable. Please try again in a moment.",
+          timestamp: new Date(),
+        },
+      ]);
     } finally {
       setIsLoading(false);
     }
   };
 
   return (
-    <section id="ai-chat" className="py-24 bg-white dark:bg-slate-950 transition-colors scroll-mt-20">
-      <div className="max-w-4xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-black mb-6 text-slate-900 dark:text-white tracking-tight">
-            Smart <span className="text-indigo-600 dark:text-blue-400">Assistant</span>
+    <section
+      id="ai-chat"
+      className="scroll-mt-24 bg-[#0C0A09] py-24"
+    >
+      <div className="mx-auto w-full max-w-7xl px-6 lg:px-8">
+
+        {/* Section Header */}
+        <div className="mb-14">
+          <div className="flex items-center gap-2 text-[#F97316]">
+            <Sparkles size={16} />
+
+            <p className="text-sm font-semibold uppercase tracking-[0.2em]">
+              AI Assistant
+            </p>
+          </div>
+
+          <h2 className="mt-4 text-3xl font-bold tracking-tight text-[#FAFAF9] md:text-5xl">
+            Ask my portfolio anything.
           </h2>
-          <p className="text-slate-600 dark:text-slate-400 text-lg font-medium italic">Ask anything about my professional background and skills.</p>
+
+          <p className="mt-4 max-w-2xl text-base leading-7 text-[#A8A29E]">
+            An AI-powered assistant that can answer questions about my
+            experience, skills, projects, and engineering background.
+          </p>
         </div>
 
-        <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-[2.5rem] shadow-2xl overflow-hidden flex flex-col h-[700px] border-b-[12px] border-b-indigo-600 dark:border-b-blue-600">
-          {/* Header */}
-          <div className="p-6 border-b border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/50 flex items-center justify-between backdrop-blur-md">
+        {/* Chat Container */}
+        <div className="overflow-hidden rounded-3xl border border-[#292524] bg-[#141210]">
+
+          {/* Chat Header */}
+          <div className="flex items-center justify-between border-b border-[#292524] px-6 py-5 md:px-8">
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-2xl bg-indigo-600 dark:bg-blue-600 flex items-center justify-center text-white font-black text-xl shadow-lg shadow-indigo-500/20">PS</div>
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#F97316] text-[#0C0A09]">
+                <Sparkles size={19} />
+              </div>
+
               <div>
-                <span className="text-base font-black text-slate-900 dark:text-slate-100 block tracking-tight">Pooja AI Bot</span>
-                <span className="text-[10px] text-green-600 dark:text-green-500 flex items-center gap-1.5 font-black uppercase tracking-widest">
-                  <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-                  System Operational
-                </span>
+                <h3 className="font-semibold text-[#FAFAF9]">
+                  Pooja AI
+                </h3>
+
+                <p className="mt-0.5 text-xs text-[#78716C]">
+                  Portfolio assistant
+                </p>
               </div>
             </div>
-            <div className="p-2 rounded-xl bg-white dark:bg-slate-800 text-slate-400 border border-slate-100 dark:border-slate-700">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z" />
-              </svg>
-            </div>
+
+            <span className="flex items-center gap-2 text-xs text-[#A8A29E]">
+              <span className="h-2 w-2 rounded-full bg-[#F97316]" />
+              AI powered
+            </span>
           </div>
 
-          {/* Messages */}
-          <div ref={scrollRef} className="flex-1 overflow-y-auto p-8 space-y-8 bg-slate-50/30 dark:bg-slate-900/10">
-            {messages.map((msg, i) => (
-              <div key={i} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
-                <div className={`max-w-[85%] rounded-[1.5rem] px-6 py-4 text-sm font-medium leading-relaxed shadow-sm transition-transform duration-300 ${
-                  msg.role === 'user' 
-                    ? 'bg-indigo-600 text-white rounded-tr-none shadow-indigo-200 dark:shadow-none translate-y-2' 
-                    : 'bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-200 rounded-tl-none border border-slate-200 dark:border-slate-800'
-                }`}>
-                  {msg.text}
-                </div>
-              </div>
-            ))}
-            {isLoading && (
-              <div className="flex justify-start">
-                <div className="bg-white dark:bg-slate-800 text-slate-400 rounded-[1.5rem] rounded-tl-none border border-slate-200 dark:border-slate-800 px-6 py-4 text-sm font-bold animate-pulse flex items-center gap-3 shadow-sm">
-                  <div className="flex gap-1">
-                    <div className="w-1.5 h-1.5 bg-slate-400 rounded-full animate-bounce"></div>
-                    <div className="w-1.5 h-1.5 bg-slate-400 rounded-full animate-bounce [animation-delay:0.2s]"></div>
-                    <div className="w-1.5 h-1.5 bg-slate-400 rounded-full animate-bounce [animation-delay:0.4s]"></div>
-                  </div>
-                  Analyzing profile...
-                </div>
-              </div>
-            )}
-          </div>
+          {/* Main Chat Area */}
+          <div className="grid lg:grid-cols-[280px_1fr]">
 
-          {/* Input Area */}
-          <div className="p-8 bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800">
-            <div className="relative group">
-              <input 
-                type="text" 
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-                onKeyDown={(e) => e.key === 'Enter' && handleSend()}
-                placeholder="Ask about my tech stack or projects..."
-                className="w-full bg-slate-50 dark:bg-slate-950 border-2 border-slate-100 dark:border-slate-800 rounded-2xl px-6 py-4 text-sm font-semibold focus:outline-none focus:border-indigo-500 dark:focus:border-blue-500 transition-all text-slate-900 dark:text-white placeholder:text-slate-400 pr-16"
-              />
-              <button 
-                onClick={handleSend}
-                disabled={isLoading}
-                className="absolute right-2 top-2 bottom-2 bg-indigo-600 dark:bg-blue-600 hover:bg-indigo-700 dark:hover:bg-blue-500 text-white px-5 rounded-xl font-black transition-all flex items-center justify-center disabled:opacity-50 shadow-md transform active:scale-90"
+            {/* Suggested Questions */}
+            <aside className="border-b border-[#292524] p-6 lg:border-b-0 lg:border-r">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#78716C]">
+                Try asking
+              </p>
+
+              <div className="mt-5 space-y-3">
+                {SUGGESTED_QUESTIONS.map((question) => (
+                  <button
+                    key={question}
+                    onClick={() => handleSend(question)}
+                    disabled={isLoading}
+                    className="w-full border-b border-[#292524] pb-3 text-left text-sm leading-6 text-[#A8A29E] transition-colors hover:text-[#F97316] disabled:opacity-50"
+                  >
+                    {question}
+                    <ArrowUpRight
+                      size={14}
+                      className="mt-2 text-[#F97316]"
+                    />
+                  </button>
+                ))}
+              </div>
+            </aside>
+
+            {/* Conversation */}
+            <div className="flex min-h-[500px] flex-col">
+
+              {/* Messages */}
+              <div
+                ref={scrollRef}
+                className="flex-1 space-y-6 overflow-y-auto p-6 md:p-8"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </button>
+                {messages.map((message, index) => (
+                  <div
+                    key={index}
+                    className={`flex ${message.role === "user"
+                        ? "justify-end"
+                        : "justify-start"
+                      }`}
+                  >
+                    <div
+                      className={`max-w-[85%] text-sm leading-7 md:text-base ${message.role === "user"
+                          ? "border-b border-[#F97316] pb-2 text-[#FAFAF9]"
+                          : "text-[#A8A29E]"
+                        }`}
+                    >
+                      <span
+                        className={`mb-2 block text-xs font-semibold uppercase tracking-wider ${message.role === "user"
+                            ? "text-[#F97316]"
+                            : "text-[#78716C]"
+                          }`}
+                      >
+                        {message.role === "user" ? "You" : "Pooja AI"}
+                      </span>
+
+                      {message.text}
+                    </div>
+                  </div>
+                ))}
+
+                {isLoading && (
+                  <div className="text-sm text-[#78716C]">
+                    <span className="text-[#F97316]">Pooja AI</span> is thinking...
+                  </div>
+                )}
+              </div>
+
+              {/* Input */}
+              <div className="border-t border-[#292524] p-4 md:p-6">
+                <div className="flex items-center gap-3">
+                  <input
+                    type="text"
+                    value={input}
+                    onChange={(event) => setInput(event.target.value)}
+                    onKeyDown={(event) => {
+                      if (event.key === "Enter") {
+                        handleSend();
+                      }
+                    }}
+                    placeholder="Ask something about Pooja..."
+                    className="h-12 flex-1 bg-transparent px-3 text-sm text-[#FAFAF9] outline-none placeholder:text-[#78716C]"
+                  />
+
+                  <button
+                    onClick={() => handleSend()}
+                    disabled={isLoading || !input.trim()}
+                    className="flex h-11 w-11 items-center justify-center rounded-full bg-[#F97316] text-[#0C0A09] transition-transform hover:scale-105 disabled:opacity-40"
+                    aria-label="Send message"
+                  >
+                    <ArrowUpRight size={19} />
+                  </button>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
+
       </div>
     </section>
   );
 };
 
 export default AIChat;
+
