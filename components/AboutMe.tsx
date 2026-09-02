@@ -28,6 +28,7 @@ const AboutMe: React.FC = () => {
                         </span>
                     </div>
 
+
                     {/* Terminal Content */}
                     <div className="p-6 font-mono text-sm leading-8 md:p-10 md:text-base">
 
@@ -42,7 +43,25 @@ const AboutMe: React.FC = () => {
                             <span className="text-[#FACC15]">role</span>
                             <span className="text-[#A8A29E]">:</span>{" "}
                             <span className="text-green-400">
-                                "Full Stack Developer"
+                                "Full Stack & AI Engineer"
+                            </span>
+                            <span className="text-[#A8A29E]">,</span>
+                        </p>
+
+                        <p className="pl-6">
+                            <span className="text-[#FACC15]">specialization</span>
+                            <span className="text-[#A8A29E]">:</span>{" "}
+                            <span className="text-green-400">
+                                "MERN Stack, APIs & AI-powered applications"
+                            </span>
+                            <span className="text-[#A8A29E]">,</span>
+                        </p>
+
+                        <p className="pl-6">
+                            <span className="text-[#FACC15]">experience</span>
+                            <span className="text-[#A8A29E]">:</span>{" "}
+                            <span className="text-green-400">
+                                "4+ years building scalable web applications"
                             </span>
                             <span className="text-[#A8A29E]">,</span>
                         </p>
@@ -51,16 +70,7 @@ const AboutMe: React.FC = () => {
                             <span className="text-[#FACC15]">focus</span>
                             <span className="text-[#A8A29E]">:</span>{" "}
                             <span className="text-green-400">
-                                "MERN Stack + AI"
-                            </span>
-                            <span className="text-[#A8A29E]">,</span>
-                        </p>
-
-                        <p className="pl-6">
-                            <span className="text-[#FACC15]">passion</span>
-                            <span className="text-[#A8A29E]">:</span>{" "}
-                            <span className="text-green-400">
-                                "Building useful products"
+                                "Clean architecture, performance & real-world products"
                             </span>
                             <span className="text-[#A8A29E]">,</span>
                         </p>
@@ -69,7 +79,7 @@ const AboutMe: React.FC = () => {
                             <span className="text-[#FACC15]">currently</span>
                             <span className="text-[#A8A29E]">:</span>{" "}
                             <span className="text-green-400">
-                                "Learning Full Stack AI Engineering"
+                                "Expanding into Full Stack AI Engineering"
                             </span>
                         </p>
 
@@ -79,6 +89,8 @@ const AboutMe: React.FC = () => {
                         </p>
 
                     </div>
+
+
                 </div>
             </div>
         </section>
