@@ -87,10 +87,7 @@ const AboutMe: React.FC = () => {
                             <span className="text-[#FAFAF9]">{"}"}</span>
                             <span className="animate-pulse text-[#F97316]">_</span>
                         </p>
-
                     </div>
-
-
                 </div>
             </div>
         </section>
