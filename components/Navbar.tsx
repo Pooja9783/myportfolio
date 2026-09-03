@@ -1,12 +1,12 @@
-
-import { Code2, Menu, X } from "lucide-react";
+import { Code2, Menu, X, Download } from "lucide-react";
 import { useState } from "react";
+import resume from "../public/pooja_shankhla_resume_2026.pdf"
 
 const navLinks = [
   { name: "About", href: "#about" },
   { name: "Skills", href: "#skills" },
   { name: "Projects", href: "#projects" },
-  { name: "AI Assistant", href: "#ai" },
+  { name: "AI Assistant", href: "#ai-chat" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -32,7 +32,7 @@ const Navbar = () => {
         </a>
 
         {/* Desktop Navigation */}
-        <div className="hidden items-center gap-8 md:flex">
+        <div className="hidden items-center gap-6 md:flex">
           {navLinks.map((link) => (
             <a
               key={link.name}
@@ -43,9 +43,24 @@ const Navbar = () => {
             </a>
           ))}
 
+          {/* Resume Button */}
+          <a
+            href={resume}
+            download
+            className="group flex items-center gap-2 rounded-lg border border-[#F97316]/50 bg-[#F97316]/10 px-4 py-2 text-sm font-semibold text-[#F97316] transition-all duration-300 hover:border-[#F97316] hover:bg-[#F97316] hover:text-[#0C0A09] hover:shadow-lg hover:shadow-orange-500/20"
+          >
+            <Download
+              size={16}
+              className="transition-transform duration-300 group-hover:translate-y-0.5"
+            />
+
+            Resume
+          </a>
+
+          {/* Let's Talk */}
           <a
             href="mailto:poojasankhala.dev@gmail.com"
-            className="rounded-lg bg-[#F97316] px-5 py-2.5 text-sm font-semibold text-white transition-all duration-200 hover:bg-[#EA580C] hover:shadow-lg hover:shadow-orange-500/20"
+            className="rounded-lg bg-[#F97316] px-5 py-2.5 text-sm font-semibold text-[#0C0A09] transition-all duration-200 hover:bg-[#EA580C] hover:shadow-lg hover:shadow-orange-500/20"
           >
             Let's Talk
           </a>
@@ -64,7 +79,8 @@ const Navbar = () => {
       {/* Mobile Navigation */}
       {isOpen && (
         <div className="border-t border-[#292524] bg-[#0C0A09] px-6 py-6 md:hidden">
-          <div className="mx-auto flex w-full max-w-7xl flex-col gap-5 lg:px-8">
+          <div className="mx-auto flex w-full max-w-7xl flex-col gap-5">
+
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -76,13 +92,26 @@ const Navbar = () => {
               </a>
             ))}
 
+            {/* Resume Mobile Button */}
+            <a
+              href="/Pooja-Sankhala-Resume.pdf"
+              download
+              onClick={() => setIsOpen(false)}
+              className="flex items-center justify-center gap-2 rounded-lg border border-[#F97316] bg-[#F97316]/10 px-5 py-3 text-sm font-semibold text-[#F97316] transition hover:bg-[#F97316] hover:text-[#0C0A09]"
+            >
+              <Download size={17} />
+              Download Resume
+            </a>
+
+            {/* Let's Talk */}
             <a
               href="mailto:poojasankhala.dev@gmail.com"
               onClick={() => setIsOpen(false)}
-              className="rounded-lg bg-[#F97316] px-5 py-3 text-center text-sm font-semibold text-white transition hover:bg-[#EA580C]"
+              className="rounded-lg bg-[#F97316] px-5 py-3 text-center text-sm font-semibold text-[#0C0A09] transition hover:bg-[#EA580C]"
             >
               Let's Talk
             </a>
+
           </div>
         </div>
       )}

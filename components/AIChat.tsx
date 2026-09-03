@@ -1,7 +1,5 @@
-
 import React, { useEffect, useRef, useState } from "react";
 import { ArrowUpRight, Sparkles } from "lucide-react";
-import { chatWithAI } from "../services/geminiService";
 import { Message } from "../types";
 
 const SUGGESTED_QUESTIONS = [
@@ -10,19 +8,23 @@ const SUGGESTED_QUESTIONS = [
   "What technologies does she work with?",
 ];
 
+const API_URL = "https://portfolio-server-t2tv.onrender.com/api/chat";
+
 const AIChat: React.FC = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: "model",
-      text: "Hi, I'm Pooja's AI assistant. Ask me anything about her experience, technical skills, projects, or the products she's worked on.",
+      text: "Hi, I'm Pooja's AI assistant. Ask me anything about her experience, technical skills, projects, or engineering background.",
       timestamp: new Date(),
     },
   ]);
 
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+
   const scrollRef = useRef<HTMLDivElement>(null);
 
+  // Automatically scroll to the latest message
   useEffect(() => {
     if (scrollRef.current) {
       scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
@@ -32,8 +34,10 @@ const AIChat: React.FC = () => {
   const handleSend = async (question?: string) => {
     const text = question || input;
 
+    // Prevent empty messages or multiple requests
     if (!text.trim() || isLoading) return;
 
+    // Add user message immediately
     const userMessage: Message = {
       role: "user",
       text,
@@ -45,26 +49,39 @@ const AIChat: React.FC = () => {
     setIsLoading(true);
 
     try {
-      const history = messages.slice(-6).map((message) => ({
-        role: message.role,
-        parts: [{ text: message.text }],
-      }));
+      const response = await fetch(API_URL, {
+        method: "POST",
 
-      const aiResponse = await chatWithAI(text, history);
-
-      setMessages((prev) => [
-        ...prev,
-        {
-          role: "model",
-          text:
-            aiResponse ||
-            "I couldn't generate a response right now. Please try again.",
-          timestamp: new Date(),
+        headers: {
+          "Content-Type": "application/json",
         },
-      ]);
-    } catch (error) {
-      console.error(error);
 
+        body: JSON.stringify({
+          message: text,
+        }),
+      });
+
+      const data = await response.json();
+
+      // Handle backend errors
+      if (!response.ok || !data.success) {
+        throw new Error(
+          data.message || "Failed to get a response from Pooja AI."
+        );
+      }
+
+      // Add AI response
+      const aiMessage: Message = {
+        role: "model",
+        text: data.message,
+        timestamp: new Date(),
+      };
+
+      setMessages((prev) => [...prev, aiMessage]);
+    } catch (error) {
+      console.error("Chat error:", error);
+
+      // Show fallback message
       setMessages((prev) => [
         ...prev,
         {
@@ -79,10 +96,7 @@ const AIChat: React.FC = () => {
   };
 
   return (
-    <section
-      id="ai-chat"
-      className="scroll-mt-24 bg-[#0C0A09] py-24"
-    >
+    <section id="ai-chat" className="scroll-mt-24 bg-[#0C0A09] py-24">
       <div className="mx-auto w-full max-w-7xl px-6 lg:px-8">
 
         {/* Section Header */}
@@ -147,9 +161,10 @@ const AIChat: React.FC = () => {
                     key={question}
                     onClick={() => handleSend(question)}
                     disabled={isLoading}
-                    className="w-full border-b border-[#292524] pb-3 text-left text-sm leading-6 text-[#A8A29E] transition-colors hover:text-[#F97316] disabled:opacity-50"
+                    className="w-full border-b border-[#292524] pb-3 text-left text-sm leading-6 text-[#A8A29E] transition-colors hover:text-[#F97316] disabled:cursor-not-allowed disabled:opacity-50"
                   >
                     {question}
+
                     <ArrowUpRight
                       size={14}
                       className="mt-2 text-[#F97316]"
@@ -170,22 +185,26 @@ const AIChat: React.FC = () => {
                 {messages.map((message, index) => (
                   <div
                     key={index}
-                    className={`flex ${message.role === "user"
+                    className={`flex ${
+                      message.role === "user"
                         ? "justify-end"
                         : "justify-start"
-                      }`}
+                    }`}
                   >
                     <div
-                      className={`max-w-[85%] text-sm leading-7 md:text-base ${message.role === "user"
+                      className={`max-w-[85%] text-sm leading-7 md:text-base ${
+                        message.role === "user"
                           ? "border-b border-[#F97316] pb-2 text-[#FAFAF9]"
                           : "text-[#A8A29E]"
-                        }`}
+                      }`}
                     >
+                      {/* Message Label */}
                       <span
-                        className={`mb-2 block text-xs font-semibold uppercase tracking-wider ${message.role === "user"
+                        className={`mb-2 block text-xs font-semibold uppercase tracking-wider ${
+                          message.role === "user"
                             ? "text-[#F97316]"
                             : "text-[#78716C]"
-                          }`}
+                        }`}
                       >
                         {message.role === "user" ? "You" : "Pooja AI"}
                       </span>
@@ -195,9 +214,13 @@ const AIChat: React.FC = () => {
                   </div>
                 ))}
 
+                {/* Loading */}
                 {isLoading && (
                   <div className="text-sm text-[#78716C]">
-                    <span className="text-[#F97316]">Pooja AI</span> is thinking...
+                    <span className="text-[#F97316]">
+                      Pooja AI
+                    </span>{" "}
+                    is thinking...
                   </div>
                 )}
               </div>
@@ -205,6 +228,7 @@ const AIChat: React.FC = () => {
               {/* Input */}
               <div className="border-t border-[#292524] p-4 md:p-6">
                 <div className="flex items-center gap-3">
+
                   <input
                     type="text"
                     value={input}
@@ -214,18 +238,20 @@ const AIChat: React.FC = () => {
                         handleSend();
                       }
                     }}
+                    disabled={isLoading}
                     placeholder="Ask something about Pooja..."
-                    className="h-12 flex-1 bg-transparent px-3 text-sm text-[#FAFAF9] outline-none placeholder:text-[#78716C]"
+                    className="h-12 flex-1 bg-transparent px-3 text-sm text-[#FAFAF9] outline-none placeholder:text-[#78716C] disabled:opacity-50"
                   />
 
                   <button
                     onClick={() => handleSend()}
                     disabled={isLoading || !input.trim()}
-                    className="flex h-11 w-11 items-center justify-center rounded-full bg-[#F97316] text-[#0C0A09] transition-transform hover:scale-105 disabled:opacity-40"
+                    className="flex h-11 w-11 items-center justify-center rounded-full bg-[#F97316] text-[#0C0A09] transition-transform hover:scale-105 disabled:cursor-not-allowed disabled:opacity-40"
                     aria-label="Send message"
                   >
                     <ArrowUpRight size={19} />
                   </button>
+
                 </div>
               </div>
 
@@ -239,4 +265,3 @@ const AIChat: React.FC = () => {
 };
 
 export default AIChat;
-

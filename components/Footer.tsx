@@ -4,7 +4,7 @@ import { ArrowUpRight, Sparkles } from "lucide-react";
 
 const Footer: React.FC = () => {
     return (
-        <footer className="bg-[#0C0A09] py-24">
+        <footer className="bg-[#0C0A09] py-24" id="contact">
             <div className="mx-auto w-full max-w-7xl px-6 lg:px-8">
 
                 {/* CTA Card */}
