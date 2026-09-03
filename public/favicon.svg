@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Orange Background -->
+  <rect width="64" height="64" rx="14" fill="#F97316"></rect>
+
+  <!-- Left Code Bracket -->
+  <path d="M25 21L15 32L25 43" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path>
+
+  <!-- Right Code Bracket -->
+  <path d="M39 21L49 32L39 43" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path>
+
+  <!-- Slash -->
+  <path d="M35 16L29 48" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"></path>
+</svg>
