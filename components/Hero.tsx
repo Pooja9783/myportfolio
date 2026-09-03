@@ -78,39 +78,32 @@ const Hero: React.FC = () => {
           {/* ================= RIGHT CODE EDITOR ================= */}
           <div className="relative flex justify-center lg:justify-end">
 
-            {/* Editor */}
-            <div className="w-full max-w-xl overflow-hidden rounded-2xl border border-[#292524] bg-[#141210] shadow-2xl shadow-black/30">
+            <div className="w-full max-w-md overflow-hidden rounded-2xl border border-[#292524] bg-[#141210] shadow-xl shadow-black/20">
 
               {/* Editor Header */}
-              <div className="flex items-center justify-between border-b border-[#292524] bg-[#1C1917] px-5 py-4">
+              <div className="flex items-center justify-between border-b border-[#292524] px-5 py-4">
 
+                {/* Window Controls */}
                 <div className="flex items-center gap-2">
-                  <span className="h-3 w-3 rounded-full bg-[#EF4444]" />
-                  <span className="h-3 w-3 rounded-full bg-[#FACC15]" />
-                  <span className="h-3 w-3 rounded-full bg-[#22C55E]" />
+                  <span className="h-2.5 w-2.5 rounded-full bg-[#EF4444]" />
+                  <span className="h-2.5 w-2.5 rounded-full bg-[#FACC15]" />
+                  <span className="h-2.5 w-2.5 rounded-full bg-[#22C55E]" />
                 </div>
 
+                {/* File Name */}
                 <div className="flex items-center gap-2 text-xs text-[#78716C]">
                   <Code2 size={14} />
-                  developer.ts
+                  developer.js
                 </div>
 
               </div>
 
-              {/* File Tab */}
-              <div className="border-b border-[#292524] bg-[#0C0A09] px-5 py-3">
-                <span className="border-b-2 border-[#F97316] pb-3 text-sm text-[#FAFAF9]">
-                  developer.ts
-                </span>
-              </div>
+              {/* Code */}
+              <div className="p-6 font-mono text-sm leading-8 md:p-7">
 
-              {/* Code Area */}
-              <div className="overflow-x-auto p-6 font-mono text-sm leading-8 md:text-base">
-
+                {/* Line 1 */}
                 <div className="flex">
-                  <span className="mr-6 select-none text-[#57534E]">
-                    1
-                  </span>
+                  <span className="w-7 select-none text-[#57534E]">1</span>
 
                   <span className="text-[#C084FC]">const</span>
 
@@ -123,10 +116,9 @@ const Hero: React.FC = () => {
                   <span className="text-[#F97316]">{"{"}</span>
                 </div>
 
+                {/* Line 2 */}
                 <div className="flex">
-                  <span className="mr-6 select-none text-[#57534E]">
-                    2
-                  </span>
+                  <span className="w-7 select-none text-[#57534E]">2</span>
 
                   <span className="pl-4 text-[#60A5FA]">
                     name
@@ -141,10 +133,9 @@ const Hero: React.FC = () => {
                   <span className="text-[#A8A29E]">,</span>
                 </div>
 
+                {/* Line 3 */}
                 <div className="flex">
-                  <span className="mr-6 select-none text-[#57534E]">
-                    3
-                  </span>
+                  <span className="w-7 select-none text-[#57534E]">3</span>
 
                   <span className="pl-4 text-[#60A5FA]">
                     role
@@ -159,28 +150,9 @@ const Hero: React.FC = () => {
                   <span className="text-[#A8A29E]">,</span>
                 </div>
 
+                {/* Line 4 */}
                 <div className="flex">
-                  <span className="mr-6 select-none text-[#57534E]">
-                    4
-                  </span>
-
-                  <span className="pl-4 text-[#60A5FA]">
-                    stack
-                  </span>
-
-                  <span className="text-[#A8A29E]">:</span>
-
-                  <span className="ml-2 text-[#FACC15]">
-                    ["React", "Node.js", "MongoDB"]
-                  </span>
-
-                  <span className="text-[#A8A29E]">,</span>
-                </div>
-
-                <div className="flex">
-                  <span className="mr-6 select-none text-[#57534E]">
-                    5
-                  </span>
+                  <span className="w-7 select-none text-[#57534E]">4</span>
 
                   <span className="pl-4 text-[#60A5FA]">
                     focus
@@ -188,17 +160,33 @@ const Hero: React.FC = () => {
 
                   <span className="text-[#A8A29E]">:</span>
 
-                  <span className="ml-2 text-[#86EFAC]">
+                  <span className="ml-2 text-[#FACC15]">
                     "Building scalable products"
                   </span>
 
                   <span className="text-[#A8A29E]">,</span>
                 </div>
 
+                {/* Line 5 */}
                 <div className="flex">
-                  <span className="mr-6 select-none text-[#57534E]">
-                    6
+                  <span className="w-7 select-none text-[#57534E]">5</span>
+
+                  <span className="pl-4 text-[#60A5FA]">
+                    stack
                   </span>
+
+                  <span className="text-[#A8A29E]">:</span>
+
+                  <span className="ml-2 text-[#86EFAC]">
+                    ["React", "Node.js", "MongoDB", "ExpressJs"]
+                  </span>
+
+                  <span className="text-[#A8A29E]"></span>
+                </div>
+
+                {/* Line 6 */}
+                <div className="flex">
+                  <span className="w-7 select-none text-[#57534E]">6</span>
 
                   <span className="pl-4 text-[#60A5FA]">
                     exploring
@@ -211,53 +199,32 @@ const Hero: React.FC = () => {
                   </span>
                 </div>
 
+                {/* Line 7 */}
                 <div className="flex">
-                  <span className="mr-6 select-none text-[#57534E]">
-                    7
-                  </span>
+                  <span className="w-7 select-none text-[#57534E]">7</span>
 
                   <span className="text-[#F97316]">{"}"}</span>
 
                   <span className="ml-2 animate-pulse text-[#F97316]">
-                    _
+                    |
                   </span>
                 </div>
 
               </div>
 
-              {/* Editor Footer */}
-              <div className="flex items-center justify-between border-t border-[#292524] bg-[#1C1917] px-5 py-3 text-xs text-[#78716C]">
+              {/* Minimal Footer */}
+              <div className="flex items-center justify-between border-t border-[#292524] px-5 py-3 text-xs text-[#78716C]">
 
-                <div className="flex items-center gap-4">
-                  <span>TypeScript</span>
-                  <span>UTF-8</span>
-                </div>
+                <span>JavaScript</span>
 
                 <div className="flex items-center gap-2">
-                  <span className="h-2 w-2 rounded-full bg-[#22C55E]" />
-                  Ready
+                  <span className="h-1.5 w-1.5 rounded-full bg-[#22C55E]" />
+                  Available
                 </div>
 
               </div>
 
             </div>
-
-            {/* Floating Code Icon */}
-            <div className="absolute -left-5 top-10 hidden h-14 w-14 items-center justify-center rounded-2xl border border-[#292524] bg-[#1C1917] shadow-xl lg:flex">
-              <Code2
-                className="text-[#F97316]"
-                size={24}
-              />
-            </div>
-
-            {/* Floating AI Icon */}
-            <div className="absolute -bottom-5 -right-5 hidden h-14 w-14 items-center justify-center rounded-2xl border border-[#292524] bg-[#1C1917] shadow-xl lg:flex">
-              <BrainCircuit
-                className="text-[#FACC15]"
-                size={24}
-              />
-            </div>
-
           </div>
 
         </div>
