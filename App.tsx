@@ -9,7 +9,6 @@ import AIChat from './components/AIChat';
 import AboutMe from './components/AboutMe';
 import Footer from './components/Footer';
 import Certifications from './components/Certifications';
-import MyJourney from './components/MyJourney';
 
 const App: React.FC = () => {
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -35,7 +34,7 @@ const App: React.FC = () => {
       <main className="relative">
         <Hero />
         <AboutMe />
-        <MyJourney />
+
         <Skills />
         <ExperienceSection />
         <Projects />

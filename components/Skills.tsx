@@ -1,6 +1,7 @@
 
 import React from "react";
 import { SKILLS } from "../constants";
+import { Code2 } from "lucide-react";
 
 const Skills: React.FC = () => {
   return (
@@ -8,9 +9,13 @@ const Skills: React.FC = () => {
       <div className="mx-auto w-full max-w-7xl px-6 lg:px-8">
 
         <div className="mb-10">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#F97316]">
-            Tech Stack
-          </p>
+          < div className="flex items-center gap-2 text-[#F97316]">
+
+            <Code2 size={16} />
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#F97316]">
+              Tech Stack
+            </p>
+          </div>
 
           <h2 className="mt-4 text-3xl font-bold tracking-tight text-[#FAFAF9] md:text-5xl">
             My development environment.

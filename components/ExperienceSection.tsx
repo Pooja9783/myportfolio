@@ -1,6 +1,7 @@
 
 import React from "react";
 import { EXPERIENCES } from "../constants";
+import { BriefcaseBusiness } from "lucide-react";
 
 const ExperienceSection: React.FC = () => {
   return (
@@ -13,9 +14,13 @@ const ExperienceSection: React.FC = () => {
 
         {/* Section Header */}
         <div className="mb-14">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#F97316]">
-            Work Experience
-          </p>
+          < div className="flex items-center gap-2 text-[#F97316]">
+
+            <BriefcaseBusiness size={16} />
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#F97316]">
+              Work Experience
+            </p>
+          </div>
 
           <h2 className="mt-4 text-3xl font-bold tracking-tight text-[#FAFAF9] md:text-5xl">
             Where I've built and grown.
