@@ -18,6 +18,7 @@ export const PERSONAL_INFO = {
   portfolio: "pooja-sankhala.com"
 };
 
+
 export const SKILLS: Skill[] = [
   {
     category: "Languages & Core",
@@ -25,60 +26,142 @@ export const SKILLS: Skill[] = [
   },
   {
     category: "Frontend",
-    items: ["React.js", "Next.js", "React Native", "Redux Toolkit", "Context API", "Tailwind CSS", "MUI", "Expo"]
+    items: [
+      "React.js",
+      "Next.js",
+      "React Native",
+      "Redux Toolkit",
+      "Context API",
+      "Tailwind CSS",
+      "MUI",
+      "Expo"
+    ]
   },
   {
     category: "Backend & DB",
-    items: ["Node.js", "Express.js", "RESTful APIs", "WebSocket", "Socket.io", "JWT", "Firebase", "MongoDB", "SQL", "NoSQL"]
+    items: [
+      "Node.js",
+      "Express.js",
+      "RESTful APIs",
+      "WebSocket",
+      "Socket.io",
+      "JWT",
+      "Firebase",
+      "MongoDB",
+      "SQL",
+      "NoSQL"
+    ]
   },
   {
     category: "DevOps & Tools",
-    items: ["Git", "Docker", "Kubernetes", "CI/CD", "Postman", "Swagger", "Vercel", "SonarQube"]
+    items: [
+      "Git",
+      "Docker",
+      "Kubernetes",
+      "CI/CD",
+      "Postman",
+      "Swagger",
+      "Vercel",
+      "SonarQube"
+    ]
+  },
+  {
+    category: "Soft Skills",
+    items: [
+      "Problem-Solving",
+      "Communication",
+      "Teamwork & Collaboration",
+      "Adaptability",
+      "Time Management",
+      "Analytical Thinking",
+      "Continuous Learning"
+    ]
   }
 ];
 
+
+
 export const PROJECTS: Project[] = [
-
-
   {
     id: "1",
     title: "Prism",
-    description: "Prism is a production-style AI Gateway that provides a single OpenAI-compatible API for routing requests across multiple LLM providers. It includes smart routing, semantic caching, retry & failover, rate limiting, budget enforcement, usage metering, and a simple operations dashboard.",
+    description:
+      "Prism is a production-style AI Gateway that provides a single OpenAI-compatible API for routing requests across multiple LLM providers. It includes smart routing, semantic caching, retry and failover, rate limiting, budget enforcement, usage metering, and an operations dashboard.",
     tech: ["MERN", "LLM", "RAG", "OpenRouter API"],
-    link: "https://github.com/Pooja9783/prism-capstone",
-    image: "https://images.unsplash.com/photo-1611746872915-64382b5c76da?auto=format&fit=crop&q=80&w=800"
+    githubLink: "https://github.com/Pooja9783/prism-capstone",
+    demoLink: "https://prism-capstone-1.onrender.com/",
+    image:
+      "https://images.unsplash.com/photo-1611746872915-64382b5c76da?auto=format&fit=crop&q=80&w=800",
   },
-
+  // {
+  //   id: "2",
+  //   title: "Resume Profile Matching",
+  //   description:
+  //     "A Retrieval-Augmented Generation (RAG) system that automatically matches and ranks candidate resumes against job descriptions using semantic search and hybrid scoring, built in Node.js without requiring external API keys.",
+  //   tech: [
+  //     "Node.js",
+  //     "@xenova/transformers",
+  //     "Chart.js",
+  //     "Vector Search",
+  //   ],
+  //   githubLink:
+  //     "https://github.com/Pooja9783/RAG-Based-Profile-matching",
+  //   image:
+  //     "https://images.unsplash.com/photo-1611746872915-64382b5c76da?auto=format&fit=crop&q=80&w=800",
+  // },
   {
     id: "2",
-    title: "Resume Profile Matching",
-    description: "A Retrieval-Augmented Generation (RAG) system that automatically matches and ranks candidate resumes against job descriptions using semantic search and hybrid scoring — built entirely in Node.js with no external API keys required.",
-    tech: ["Node.js", "@xenova/transformers", "chart.js + canvas", "vectorDB.json"],
-    link: "https://github.com/Pooja9783/RAG-Based-Profile-matching",
-    image: "https://images.unsplash.com/photo-1611746872915-64382b5c76da?auto=format&fit=crop&q=80&w=800"
+    title: "GossipBox",
+    description:
+      "A real-time chat application using WebSockets, MongoDB, Node.js, and Express for instant messaging.",
+    tech: ["MERN", "WebSocket", "Socket.io"],
+    githubLink: "https://github.com/Pooja9783/message-app",
+    demoLink: "https://message-app-prod.onrender.com",
+    image: "https://images.unsplash.com/photo-1611746872915-64382b5c76da?auto=format&fit=crop&q=80&w=800",
   },
+  // {
+  //   id: "4",
+  //   title: "Resume LLM Assistant",
+  //   description:
+  //     "An interactive Python tool powered by a Large Language Model that reads, searches, and summarizes resumes in TXT, PDF, and DOCX formats. Users can query resume content using natural language.",
+  //   tech: ["Python", "LLM", "Natural Language Processing", "PDF", "DOCX"],
+  //   githubLink: "https://github.com/Pooja9783/llm-intergration",
+  //   image:
+  //     "https://images.unsplash.com/photo-1611746872915-64382b5c76da?auto=format&fit=crop&q=80&w=800",
+  // },
+
+
+  {
+    id: "5",
+    title: "ShareMe - Image Sharing App",
+    description:
+      "A social image-sharing application where users can upload images and explore images shared by other users on the home page. Features include Google authentication, image downloading, and saving images for later access. Built with React.js and Redux for state management.",
+    tech: ["React.js", "Redux", "Google OAuth", "Vercel"],
+    githubLink: "https://github.com/Pooja9783/message-app",
+    demoLink: "https://share-me-app-one.vercel.app/",
+    image:
+      "https://images.unsplash.com/photo-1611746872915-64382b5c76da?auto=format&fit=crop&q=80&w=800",
+  },
+
 
   {
     id: "3",
-    title: "Chat MERN App",
-    description: "A real-time chat application using WebSocket, MongoDB, Node.js, and Express for instant messaging.",
-    tech: ["MERN", "WebSocket", "Socket.io"],
-    link: "https://github.com/Pooja9783/ai-chatbot",
-    image: "https://images.unsplash.com/photo-1611746872915-64382b5c76da?auto=format&fit=crop&q=80&w=800"
-  },
-
-
-  {
-    id: "4",
-    title: "Resume LLM Assistant",
+    title: "ChatBot AI",
     description:
-      "An interactive Python tool powered by a Large Language Model (LLM) that reads, searches, and summarizes resumes in TXT, PDF, and DOCX formats. Users can query resume content using natural language.",
-    tech: ["Python", "LLM", "Natural Language Processing", "PDF", "DOCX"],
-    link: "https://github.com/Pooja9783/llm-intergration",
-    image: "https://images.unsplash.com/photo-1611746872915-64382b5c76da?auto=format&fit=crop&q=80&w=800"
-
+      "An AI-powered chatbot built with the MERN stack and OpenRouter API to help software engineers explore programming concepts, understand technical topics, and get assistance with software development questions. Features an interactive chat interface and backend integration with LLMs, keeping API credentials out of the frontend.",
+    tech: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "OpenRouter API",
+      "LLMs",
+    ],
+    githubLink: "https://github.com/Pooja9783/ai-chatbot",
+    demoLink: "https://ai-chatbot-omega-eight-39.vercel.app/",
+    image:
+      "https://images.unsplash.com/photo-1611746872915-64382b5c76da?auto=format&fit=crop&q=80&w=800",
   },
-
 
 
 ];
