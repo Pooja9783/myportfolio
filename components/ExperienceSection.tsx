@@ -14,7 +14,8 @@ const ExperienceSection: React.FC = () => {
 
         {/* Section Header */}
         <div className="mb-14">
-          < div className="flex items-center gap-2 text-[#F97316]">
+          <div className="flex items-center gap-2 text-[#F97316]">
+          
 
             <BriefcaseBusiness size={16} />
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#F97316]">

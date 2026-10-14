@@ -59,13 +59,27 @@ export const PROJECTS: Project[] = [
   },
 
   {
-    id: "1",
+    id: "3",
     title: "Chat MERN App",
     description: "A real-time chat application using WebSocket, MongoDB, Node.js, and Express for instant messaging.",
     tech: ["MERN", "WebSocket", "Socket.io"],
-    link: "#",
+    link: "https://github.com/Pooja9783/ai-chatbot",
     image: "https://images.unsplash.com/photo-1611746872915-64382b5c76da?auto=format&fit=crop&q=80&w=800"
   },
+
+
+  {
+    id: "4",
+    title: "Resume LLM Assistant",
+    description:
+      "An interactive Python tool powered by a Large Language Model (LLM) that reads, searches, and summarizes resumes in TXT, PDF, and DOCX formats. Users can query resume content using natural language.",
+    tech: ["Python", "LLM", "Natural Language Processing", "PDF", "DOCX"],
+    link: "https://github.com/Pooja9783/llm-intergration",
+    image: "https://images.unsplash.com/photo-1611746872915-64382b5c76da?auto=format&fit=crop&q=80&w=800"
+
+  },
+
+
 
 ];
 

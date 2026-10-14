@@ -1,12 +1,10 @@
+
 import React from "react";
-import {
-  ArrowRight,
-  Sparkles,
-  Code2,
-  BrainCircuit,
-} from "lucide-react";
+import { Code2, Download } from "lucide-react";
 
 const Hero: React.FC = () => {
+  const resume = "/pooja_shankhla_resume_2026.pdf";
+
   return (
     <section
       id="hero"
@@ -16,66 +14,41 @@ const Hero: React.FC = () => {
       <div className="pointer-events-none absolute right-0 top-20 h-[500px] w-[500px] rounded-full bg-orange-500/10 blur-[140px]" />
 
       {/* Main Container */}
-      <div className="mx-auto flex min-h-screen w-full max-w-7xl items-center px-6 pt-20 lg:px-8">
-        <div className="grid w-full items-center gap-16 lg:grid-cols-2">
-
-          {/* ================= LEFT CONTENT ================= */}
-          <div>
-            {/* Badge */}
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#292524] bg-[#1C1917] px-4 py-2">
-              <Sparkles size={15} className="text-[#F97316]" />
-
-              <span className="text-sm font-medium text-[#A8A29E]">
-                Full Stack Developer & AI Enthusiast
-              </span>
-            </div>
-
-            {/* Intro */}
+      <div className="mx-auto flex min-h-screen w-full max-w-7xl items-center px-6 pb-12 pt-24 lg:px-8">
+        <div className="grid w-full min-w-0 items-center gap-12 lg:grid-cols-2 lg:gap-12">
+          {/* LEFT CONTENT */}
+          <div className="min-w-0">
             <p className="mb-4 text-lg font-medium text-[#A8A29E]">
-              Hi, I'm
+              Hey, I'm
             </p>
 
-            {/* Name */}
             <h1 className="text-5xl font-bold tracking-tight text-[#FAFAF9] md:text-6xl">
-              Pooja Sankhala.
+              Pooja Sankhala
+              <span className="text-[#F97316]">.</span>
             </h1>
 
-            {/* Heading */}
-            <h2 className="mt-3 text-2xl font-semibold text-[#F97316] md:text-3xl">
-              I build modern web applications.
+            <h2 className="mt-5 text-2xl font-semibold leading-relaxed text-[#F97316] md:text-3xl">
+              I'm a Full Stack Developer building modern web applications.
             </h2>
 
-            {/* Description */}
-            <p className="mt-6 max-w-xl text-base leading-8 text-[#A8A29E] md:text-lg">
-              I'm a Full Stack Developer building modern web applications
-              and exploring how Artificial Intelligence can create smarter
-              and more useful digital products.
-            </p>
-
-            {/* Buttons */}
-            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+            {/* Resume Button */}
+            <div className="mt-8">
               <a
-                href="#projects"
-                className="group flex items-center justify-center gap-2 rounded-xl bg-[#F97316] px-6 py-3.5 font-semibold text-white transition-all duration-300 hover:bg-[#EA580C] hover:shadow-lg hover:shadow-orange-500/20"
+                href={resume}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center gap-2 rounded-xl bg-[#F97316] px-6 py-3.5 font-semibold text-[#0C0A09] transition-all duration-300 hover:bg-[#EA580C] hover:shadow-lg hover:shadow-orange-500/20"
               >
-                View Projects
-
-                <ArrowRight
+                <Download
                   size={18}
-                  className="transition-transform duration-300 group-hover:translate-x-1"
+                  className="transition-transform duration-300 group-hover:translate-y-0.5"
                 />
-              </a>
-
-              <a
-                href="mailto:poojasankhala.dev@gmail.com"
-                className="flex items-center justify-center rounded-xl border border-[#292524] bg-[#1C1917] px-6 py-3.5 font-semibold text-[#FAFAF9] transition-all duration-300 hover:border-[#F97316] hover:text-[#F97316]"
-              >
-                Let's Talk
+                View Resume
               </a>
             </div>
           </div>
 
-          {/* ================= RIGHT CODE EDITOR ================= */}
+          {/* RIGHT CODE EDITOR */}
           <div className="relative flex justify-center lg:justify-end">
 
             <div className="w-full max-w-md overflow-hidden rounded-2xl border border-[#292524] bg-[#141210] shadow-xl shadow-black/20">

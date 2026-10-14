@@ -7,10 +7,8 @@ const Skills: React.FC = () => {
   return (
     <section id="skills" className="bg-[#0C0A09] py-24 scroll-mt-24">
       <div className="mx-auto w-full max-w-7xl px-6 lg:px-8">
-
         <div className="mb-10">
-          < div className="flex items-center gap-2 text-[#F97316]">
-
+          <div className="flex items-center gap-2 text-[#F97316]">
             <Code2 size={16} />
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#F97316]">
               Tech Stack
@@ -23,7 +21,6 @@ const Skills: React.FC = () => {
         </div>
 
         <div className="overflow-hidden rounded-2xl border border-[#292524] bg-[#141210]">
-
           {/* Terminal Header */}
           <div className="flex items-center gap-2 border-b border-[#292524] px-5 py-4">
             <span className="h-3 w-3 rounded-full bg-red-400" />
@@ -37,7 +34,6 @@ const Skills: React.FC = () => {
 
           {/* Terminal Content */}
           <div className="space-y-6 p-6 font-mono text-sm md:p-10 md:text-base">
-
             <p className="text-[#A8A29E]">
               <span className="text-[#F97316]">$</span> cat skills.json
             </p>
@@ -57,14 +53,11 @@ const Skills: React.FC = () => {
             </div>
 
             <p className="animate-pulse text-[#F97316]">_</p>
-
           </div>
         </div>
-
       </div>
     </section>
   );
 };
 
 export default Skills;
-
